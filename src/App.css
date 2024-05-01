@@ -1,0 +1,490 @@
+.main__section {
+    min-height: 560px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.content__section {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content__scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__dash--section {
+    box-shadow: 0 0 10px var(--LIGHTTEXT-COLOR);
+}
+
+/* || TABLES - GENERAL */
+thead,
+tbody,
+tr {
+    display: contents;
+}
+
+.table {
+    font-size: .8rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1.5fr 0.5fr;
+    gap: 0.05em;
+    margin: .5em 2em 5em .5em;
+    
+}
+
+.table__button {
+    padding: 0.25em;
+}
+
+.table__view-button {
+    background-color: transparent;
+    border: .1px solid var(--LIGHTTEXT-COLOR);
+    border-radius: 5px;
+}
+
+.table__view-button:hover,
+.table__view-button:focus-visible {
+    transform: scale(1.1);
+}
+
+.table__view-button a,
+.table__view-button a:visited {
+    font-size: .7rem;
+    padding: 0.2em .5em;
+    color: var(--LIGHTTEXT-COLOR);
+}
+
+.table__view-button a:hover,
+.table__view-button a:focus-visible{
+    color: var(--LIGHTTEXT-COLOR);
+}
+
+.table__th{
+    background-color: var(--BODY-BGCOLOR);
+}
+
+.table__th,
+.table__cell {
+    padding: .2em .5em 0em;
+    text-align: left;
+    box-shadow: 0 0 1px var(--LIGHTTEXT-COLOR);
+}
+
+.table__cell {
+    font-size: 0.7rem;
+}
+
+.cell__hover:hover {
+    box-shadow: 0 0 5px var(--LIGHTTEXT-COLOR);
+}
+
+.table__th:last-child,
+.table__cell:last-child,
+.table__th:nth-last-child(2),
+.table__cell:nth-last-child(2) {
+    display: grid;
+    place-content: center;
+}
+
+.table__cell--inactive {
+    background-color: var(--INACTIVE);
+}
+
+.table__cell--status {
+    font-weight: bold;
+}
+
+.lg__device--cell {
+    display: none;
+}
+.sm__device__cell {
+    display: block;
+}
+
+.table__status--open {
+    color: var(--STATUS-OPEN);
+}
+
+.table__status--completed {
+    color: var(--STATUS-COMPLETE)
+}
+
+/* || TABLE - CUSTOMERS */
+.table__customers {
+    grid-template-columns: repeat(4, 1fr) repeat(2, 0.5fr);
+}
+
+/* || TABLE - EMPLOYEES */
+.table__employee {
+    grid-template-columns: repeat(4, 1fr) repeat(2, 0.5fr);
+}
+
+/* || TABLE - REPAIR ORDERS */
+.table__repairOrders {
+    grid-template-columns: repeat(3, 1fr) repeat(3, 0.5fr);
+}
+
+.table__custRepairOrders {
+    grid-template-columns: repeat(3, 1fr) repeat(2, 0.5fr);
+}
+
+.userCreated,
+.repairOrder__deviceType,
+.repairOrder__created,
+.repairOrder__updated {
+    display: none;
+}
+
+/* || TABLE - INVOICES */
+.table__invoices {
+    grid-template-columns: repeat(4, 1fr) repeat(4, 0.5fr);
+}
+
+/* || TABLE - INVOICES */
+.table__custInvoices {
+    grid-template-columns: repeat(4, 1fr) repeat(3, 0.5fr);
+}
+
+.invoice__created,
+.inovoice__updated {
+    display: none;
+}
+
+/* || TABLE - REPAIR REQUESTS */
+.table__repairRequests {
+    grid-template-columns: repeat(4, 1fr) repeat(2, 0.5fr);
+}
+
+.repairrequest__created,
+.repairrequest__updated {
+    display: none;
+}
+
+/* || TABLE - EMPLPOYEE ANALYSIS */
+.table__employeesAnalysis {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* || TABLE - CUSTOMER ANALYSIS */
+.table__customersAnalysis {
+    grid-template-columns: repeat(1, 1fr) repeat(1, 0.5fr) repeat(3, 1fr) repeat(1, 0.5fr) repeat(2, 1fr);
+}
+
+/* || FORM */
+.form {
+    display: flex;
+    font-size: .7rem;
+    flex-flow: column nowrap;
+    gap: 0.5em;
+    width: 100%;
+    padding: 1em 2em;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row  wrap;
+    gap: .5em;
+}
+
+.row--select {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.form__row--select {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.form__divider {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5em;
+    padding: 1.5em 1em;
+}
+
+.form__column--divider {
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    gap: .8em;
+    margin-bottom: .5em;
+}
+
+.form__column--divide {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .8em;
+    padding: 0em 1em;
+    margin-bottom: .5em;
+}
+
+.input__public--divider {
+     width: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    gap: .5em;
+    margin-bottom: .5em;
+}
+
+.input--divider {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    gap: .5em;
+    margin-bottom: .5em;
+}
+
+.form__checkbox-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .1px solid var(--LIGHTTEXT-COLOR);
+    margin-bottom: 1em;
+}
+
+.form__input,
+.form__submit-button {
+    padding: 0.3em .5em;
+    border-radius: 10px;
+}
+
+.form__input--text {
+    min-height: 150px;
+}
+
+.form__input--incomplete {
+    border: 1px solid red;
+
+}
+
+.form__checkbox {
+    width: 15px;
+    height: 15px;
+}
+
+.form__select {
+    height: fit-content;
+    width: fit-content;
+    border: .1px solid var(--LIGHTTEXT-COLOR);
+    box-shadow: 0 0 10px var(--LIGHTTEXT-COLOR);
+    padding: 0.3em .5em;
+}
+
+
+.action-buttons {
+    display: flex;
+    flex-flow: nowrap;
+}
+
+/* ||  VIEW */
+.view {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--LIGHTTEXT-COLOR);
+}
+
+.view__container {
+    display: flex;
+    font-size: .7rem;
+    flex-flow: column nowrap;
+    gap: 0.5em;
+    width: 100%;
+    padding: 1em 2em;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.row--wrap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.public__form--submit {
+    color: var(--WHITETEXT-COLOR);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    gap: .3em;
+
+}
+
+.public__form--submit .public__button {
+    font-size: 1rem;
+    padding: 1em auto;
+    color: var(--WHITETEXT-COLOR);
+
+}
+
+.public__button {
+    padding: 0.2rem 1.5rem;
+    background: var(--GRADIENT-TEXT); 
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.public__button  a:any-link {
+    color: var(--WHITETEXT-COLOR);
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 25px;
+}
+
+.public__submit--link {
+    color: var(--LIGHTTEXT-COLOR)
+}
+.public__submit--link a:any-link {
+    color: var(--LIGHTTEXT-COLOR);
+    text-decoration: underline;
+}
+
+.public__submit--link a:any-link:hover {
+    color: var(--FOOTER-COLOR);
+    text-decoration: underline;
+}
+
+/* ||  MEDIA QUERIES */
+
+/* middle device eg, tabblets/bigger phones*/
+@media screen and (max-width: 700px) {
+    .input__public--divider {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        gap: .5em;
+        margin-bottom: .5em;
+    }
+
+    .content__scroll {
+        width: 500px;
+    }
+
+    .table {
+        margin: .5em 2em 5em 1em;
+    }
+
+    .table__margin {
+        margin: .5em 2em 5em 2em;
+    }
+
+    .form__column--divider {
+        width: 100%;
+    }
+
+    .form__column--divide {
+        width: 100%;
+    }
+}
+
+/* middle device eg, tabblets/bigger phones*/
+@media screen and (min-width: 700px) {
+    .lg__device--cell {
+        display: block;
+    }
+
+    .sm__device--cell {
+        display: none;
+    }
+
+    /* || TABLE - REPAIR ORDERS */
+    .table__repairOrders {
+        grid-template-columns: repeat(8, 1.5fr)  repeat(2, 0.5fr);
+    }
+
+    .table__custRepairOrders {
+        grid-template-columns: repeat(8, 1.5fr)  repeat(1, 0.5fr);
+    }
+
+    .userCreated,
+    .repairOrder__deviceType,
+    .repairOrder__created,
+    .repairOrder__updated {
+        display: block;
+    }
+    
+    .table__repairOrders {
+        
+        margin: .5em 0em 5em 0em;
+    }
+
+    /* || TABLE - INVOICES */
+    .table__invoices {
+        grid-template-columns: repeat(7, 1fr) repeat(2, 0.5fr);
+    }
+
+    .table__custInvoices {
+        grid-template-columns: repeat(7, 1fr) repeat(1, 0.5fr);
+    }
+
+    .invoice__created,
+    .inovoice__updated {
+        display: block;
+    }
+
+    /* || TABLE - REPAIR REQUESTS */
+    .table__repairRequests {
+        grid-template-columns: repeat(6, 1fr) repeat(2, 0.5fr);
+    }
+    
+    .repairrequest__created,
+    .repairrequest__updated {
+        display: block;
+    }
+}
+
+ /* Large device eg, tabblets/bigger phones */
+@media screen and (min-width: 1240px) {
+    .table {
+        margin: .5em 0em 5em 0em;
+    }
+
+    .form__row--select {
+        flex: 1;
+    }
+
+    .form__column--divider {
+        flex: 1;
+    }
+
+    .form__column--divide {
+        flex: 1;
+    }
+}

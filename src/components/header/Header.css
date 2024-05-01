@@ -1,0 +1,117 @@
+.home__header {
+    width: 100%;
+    height: auto;
+    padding: 10em 0em 3em 2em;
+    position: relative;
+    background-color: #000;
+}
+
+.header__content {
+    flex: 1;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    background-color: var(--NAVHEADER-BGCOLORR);
+}
+
+.header__content-wellcome  {
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: var(--GRADIENT-TEXT); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0em;
+    margin: 0em;
+}
+
+.header__content-h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+    background: linear-gradient(to right, rgba(0, 168, 253), #AE67FA 35%, #e00a95);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header__content-p {
+    color: var( --LIGHTTEXT-COLOR);
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    margin-top: 1.5em;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--LIGHTTEXT-COLOR);
+}
+
+/* middle mobile phones/devices*/
+@media screen and (max-width: 500px) {
+    .home__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6em 0em 1em 0em;
+    }
+
+    .header__content {
+        width: 80%;
+        padding: .7em;
+        margin: 0em 1em;
+    }
+    
+    .header__content-wellcome  {
+        font-size: .9rem;
+        padding: .3em;
+    }
+    
+    .header__content-h1 {
+        font-size: 1.7rem;
+        line-height: 1.1em;
+        padding-top: .1em;
+    }
+
+    .header__content-p {
+        font-size: .7rem;
+        line-height: 22px;
+        margin-top: 1.1rem;
+        padding-top: .1rem;
+    }
+} 
+
+/* middle device eg, tabblets/bigger phones*/
+@media screen and (min-width: 1240px) {
+    .home__header {
+        padding: 12em 0em 3em 2em;
+    }
+
+    .header__content {
+        width: 60%;
+    }
+    
+    .header__content-wellcome  {
+        font-size: 1.6rem;
+        padding: .3em;
+        margin: 0em;
+    }
+    
+    .header__content-h1 {
+        font-size: 5.1rem;
+    }
+    
+    .header__content-p {
+        color: var( --LIGHTTEXT-COLOR);
+        font-style: normal;
+        font-weight: normal;
+        line-height: 27px;
+        margin-top: 1.5rem;
+        padding-top: .5rem;
+    }
+}

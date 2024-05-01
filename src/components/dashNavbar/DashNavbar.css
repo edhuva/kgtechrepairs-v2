@@ -1,0 +1,33 @@
+.dash__navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--DASHHEADER-BGCOLOR);
+    align-items: center;
+    padding: .3em 2em .2em;
+}
+
+.dash__navbar-top-p {
+    color: var(--WHITETEXT-COLOR);
+}
+
+.dash__userInfoTop {
+    display: none;
+}
+
+/* medium devices  */
+@media screen and (max-width: 500px) {
+    .dash__userInfoTop {
+        display: block;
+    }
+    
+    .dash__navbar-top-p {
+        display: none;
+    }
+} 
+
+ /* Large device eg, tabblets/bigger phones */
+@media screen and (min-width: 1240px) {
+    .dash__navbar {
+        padding: .8em 2em .2em;
+    }
+} 

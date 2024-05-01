@@ -1,0 +1,205 @@
+.footer {
+    color: var(--LIGHTTEXT-COLOR);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--FOOTER-COLOR);
+}
+
+.footer__news {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .5em 0em;
+    margin: 3em 0;
+    border-radius: 5px;
+    background-color: var(--NAVHEADER-COLORR);
+    border: .1px solid var(--LIGHTTEXT-COLOR);
+    box-shadow: 0 0 15px var(--LIGHTTEXT-COLOR);
+}
+
+.footer__news-content {
+    font-size: 1.3rem;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(0, 168, 253), #AE67FA 35%, #e00a95);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer__news-icon {
+    display: grid;
+    place-content: center;
+    padding: .5em;
+}
+
+.footer__news-input {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.footer__news-input input {
+    padding: 0.2rem 1.5rem;
+    margin: .3em;
+    color: var(--TEXT-COLOR);
+    background: var(--WHITETEXT-COLOR); 
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer__news-input button {
+    padding: 0.2rem 1.5rem;
+    margin: .3em;
+    color: var(--WHITETEXT-COLOR);
+    background: var(--GRADIENT-TEXT); 
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    margin: 3em 0;
+}
+
+.footer__company-logo {
+    margin-bottom: .5em;
+}
+
+.footer__company-logo a,
+.footer__company-logo a:visited {
+    background: linear-gradient(to right, rgba(0, 168, 253), #AE67FA 35%, #e00a95);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer__company-logo a:hover,
+.footer__company-logo a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+
+.footer__company-logo h1 {
+    font-size: 1.5rem;
+}
+
+.footer-logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2em;
+}
+
+.footer-logo {
+    margin-right: 1em;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer__addr {
+    font-size: .9rem;
+}
+
+.footer__addr a,
+.footer__addr a:visited {
+    color: var(--LIGHTTEXT-COLOR);
+}
+
+.footer__links {
+    width: 250px;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+}
+
+.footer__links h4 {
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 16px;
+    margin-bottom: 1rem;
+    color: var(--WHITETEXT-COLOR);
+}
+
+.footer__links a,
+.footer__links a:visited {
+    color: var(--LIGHTTEXT-COLOR);
+    font-size: .9rem;
+    line-height: 14px;
+    margin: 0.7em 0;
+    cursor: pointer;
+}
+
+.footer__links a:hover {
+    color: var(--WHITETEXT-COLOR);
+}
+
+.footer__links a i {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    padding-right: .5rem;
+    transition: .2s linear;
+}
+
+.footer__links a i:hover {
+    padding-right: .2rem;
+    transition: .2s linear;
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: .7rem;
+    line-height: 14px;
+    margin-top: 2em;
+}
+
+/* medium devices  */
+@media screen and (max-width: 500px) {
+    .footer__news-content {
+        font-size: 1rem;
+    }
+} 
+
+/* larger  */
+@media screen and (min-width: 800px) {
+    .footer__news {
+        width: 80%;
+    }
+
+    .footer__news-content {
+        font-size: 1rem;
+    }
+
+    .footer__news-icon {
+        font-size: 1.3rem;
+    }
+
+    .footer__links {
+        margin: 1.2em;
+    }
+} 

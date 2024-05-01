@@ -1,0 +1,24 @@
+.dash__userStatus {
+    width: 100%;
+    color: var(--WHITETEXT-COLOR);
+    display: flex;
+    font-size: .7rem;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+/* medium devices  */
+@media screen and (max-width: 500px) {
+    .dash__userStatus {
+        font-size: .6rem;
+    }
+} 
+
+/* middle device eg, tabblets/bigger phones*/
+@media screen and (min-width: 1240px) {
+    .dash__userStatus {
+        justify-content: flex-end;
+    }
+}

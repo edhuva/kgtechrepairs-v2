@@ -1,0 +1,30 @@
+.home__brand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--BGCOLOR);
+    border-radius: 5px;
+}
+
+.brand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-top: 1px solid #33333380;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 0 10px var(--BORDER-BGCOLOR);
+}
+
+.home__brand-div {
+    flex: 1;
+    max-width: 150px;
+    min-width: 120px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2em;
+}

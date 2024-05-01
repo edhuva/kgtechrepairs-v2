@@ -1,0 +1,139 @@
+.home__about {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 1em;
+}
+
+.home__about-img {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: .3em;
+   margin: 1em auto;
+}
+
+.about-img {
+    width: 400px;
+    height: 400px;
+    background-color: var(--BGCOLOR);
+    background-image: url('../../img/comp5.jpg');
+    background-size: cover;
+    background-position: top right;
+    background-blend-mode: normal;
+    border-radius: 50%;
+}
+
+.home__about-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+}
+
+.home__about-title {
+    padding: .3em;
+    margin-bottom: .8em;
+}
+
+.home__about-title h2{
+    font-size: 2.5rem;
+    line-height: 35px;
+}
+
+.home__about-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: .2em;
+}
+
+.home__about-text {
+    display: flex;
+    font-size: .9rem;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__about-text p {
+    font-weight: 2500;
+    line-height: 24px;
+    margin-bottom: 1em;
+}
+
+.home__about-text ul {
+    list-style-type: disc;
+    margin-bottom: .3em;
+}
+
+.home__about-text li {
+  list-style-position: inside;
+}
+
+.home-about-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-about-button button {
+    margin: .5em;
+    padding: .6rem 1.5rem;
+    color: var(--WHITETEXT-COLOR);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    background: var(--GRADIENT-TEXT); 
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .home__about {
+        padding: .3em;
+    }
+
+    .home__about-img {
+       margin-top: .5em;
+    }
+
+    .about-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .home__about-info {
+        width: 100%; 
+        padding-top: 1em; 
+    }
+
+    .home__about-title h2{
+        font-size: 1.7rem;
+    }
+
+    .home__about-text p, li {
+        font-size: .75rem;
+        line-height: 20px;
+    }
+}
+
+/* larger  */
+@media screen and (min-width: 800px) {
+   
+    .home__about-info {
+        display: flex;
+        width: 600px; 
+    }
+
+    .home__about-img img {
+        width: 500px;
+        height: 400px;
+    }
+} 
+

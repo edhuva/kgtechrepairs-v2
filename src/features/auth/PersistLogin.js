@@ -1,11 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-import { useRefreshMutation } from "./authApiSlice";
+import { useEffect, useRef, useState } from 'react';
 import { useSelector } from "react-redux";
+import { useRefreshMutation } from "./authApiSlice";
 import { selectCurrentToken } from "./authSlice";
 import usePersist from "../../hooks/usePersist";
 import PulseLoader from "react-spinners/PulseLoader";
 
+//Persist Login
 const PersistLogin = () => {
 
     const [persist] = usePersist();
@@ -14,6 +15,7 @@ const PersistLogin = () => {
 
     const [trueSuccess, setTrueSuccess] = useState(false);
 
+    //refresh Mutation
     const [refresh, {
         isUninitialized,
         isLoading,
@@ -26,7 +28,6 @@ const PersistLogin = () => {
         if (effectRan.current === true || process.env.NODE_ENV !== 'development') {//React 18 Strict Mode
 
             const verifyRefreshToken = async () => {
-                console.log('verifying refresh token');
                 try {
                     //const response
                     await refresh()
@@ -34,44 +35,44 @@ const PersistLogin = () => {
 
                     //refresh verified
                     setTrueSuccess(true)
-                    
                 } catch(err) {
                     console.error(err)
                 }
             }
 
-            if (!token && persist) verifyRefreshToken()
+            if (!token && persist) {
+                verifyRefreshToken()
+            }
         }
-        
+
         return () => effectRan.current = true
 
         //eslint-disable-next-line
     }, [])
 
     let content;
-    if (!persist) { // persist: no
-        console.log('no persist')
+    if (!persist) {// persist: no
         content = <Outlet />
-    } else if (isLoading) { //persist: yes, token: no
-        console.log('loading')
-        content = <PulseLoader color={"#FFF"} />
-    } else if (isError) { //persist: yes, token: no
-        console.log('error')
+    } else if (isLoading) {//persist: yes, token: no
+        content = <div className="reLogin">
+                <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 0em'}} />;
+            </div>
+    } else if (isError) {//persist: yes, token: no
         content = (
-            <p className='errmsg'>
-                {`${error?.data?.message} - `}
-                <Link to="/login"> login again</Link>.
-            </p>
+            <div className="reLogin">
+                <p className='errmsg'>
+                    {error?.data?.message ? `${error.data.message} - ` : `Network Error - `}
+                    <Link to="/login">Please login again!</Link>.
+                </p>
+            </div>
+            
         )
-    } else if (isSuccess && trueSuccess) { //persist: yes, token: yes
-        console.log('success')
+    } else if (isSuccess && trueSuccess) { //isSuccess && trueSuccess
         content = <Outlet />
-    } else if (token && isUninitialized) { //persist: yes, token: yes
-        console.log('token and uninit')
-        console.log(isUninitialized)
+    } else if (token && isUninitialized) { //token && isUninitialized
         content = <Outlet />
     }
-    
+
   return content
 }
 

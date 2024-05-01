@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
+//use Title hook
 const useTitle = (title) => {
-
     useEffect(() => {
         const prevTitle = document.title;
         document.title = title;

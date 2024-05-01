@@ -1,19 +1,20 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { setCredentials } from '../../features/auth/authSlice';
 
-const baseQuery = fetchBaseQuery({
-    baseUrl: 'https://kgtechrepairs-api.onrender.com',
+//fetch Base Query 
+const baseQuery =  fetchBaseQuery({ 
+    baseUrl: 'http://localhost:3500',
     credentials: 'include',
-    prepareHeaders: (headers, { getState }) => {
-        const token = getState().auth.token;
-
+    prepareHeaders: (hearders, { getState }) => {
+        const token = getState().auth.token
         if (token) {
-            headers.set("authorization", `Bearer ${token}`);
+            hearders.set("authorization", `Bearer ${token}`)
         }
-        return headers;
-    }
+        return hearders
+    },
 })
 
+//base Query With Reauth
 const baseQueryWithReauth = async (args, api, extraOptions) => {
     //console.log(args) // request url, method, body
     //console.log(api) // signal, dispatch, getState()
@@ -23,19 +24,16 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
 
     // you can also handle other status codes, too here
     if (result?.error?.status === 403) {
-        //sending refresh token
-
         // send refresh token to get new access token
         const refreshResult = await baseQuery('/auth/refresh', api, extraOptions);
 
         if (refreshResult?.data) {
-
-            //store the new token 
+            //store the new token
             api.dispatch(setCredentials({ ...refreshResult.data }));
 
-            //retry original query with new access token 
+            //retry original query with new access token
             result = await baseQuery(args, api, extraOptions);
-        }  else {
+        } else {
             if (refreshResult?.error?.status === 403) {
                 refreshResult.error.data.message = 'Your login has expired.'
             }
@@ -49,6 +47,6 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
 
 export const apiSlice = createApi({
     baseQuery: baseQueryWithReauth,
-    tagTypes: ['Note', 'User'],
+    tagTypes: ['RepairOrder', 'User', 'Employee', 'Customer', 'Invoice', 'RepairRequest'],
     endpoints: builder => ({})
 })

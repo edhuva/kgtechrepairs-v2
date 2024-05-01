@@ -1,0 +1,123 @@
+.hero {
+    margin-top: 2.2rem;
+    scroll-margin-top: 6.5rem;
+    position: relative;
+    background-color: red;
+    height: 100%;
+    width: 100%; 
+    top: -10;
+}
+
+.hero__content {
+    flex: 1;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    z-index: 1;
+    padding: 1em;
+    margin-left: 1rem;
+    border-radius: 5%;
+    background-color: var(--NAVHEADER-BGCOLORR);
+}
+
+.hero__content-wellcome  {
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: var(--GRADIENT-TEXT); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0em;
+    margin: 0em;
+}
+
+.hero__content-h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+    background: linear-gradient(to right, rgba(0, 168, 253), #AE67FA 35%, #e00a95);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero__content-p {
+    color: var( --LIGHTTEXT-COLOR);
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    margin-top: 1.5rem;
+    padding-top: .1rem;
+}
+
+.heroSlider {
+    height: 100%;
+    width: 100%; 
+    top: -10;
+    background-color: #000;
+}
+
+.heroImage {
+    width: 100%;
+    height: 650px;
+    position: cover;
+} 
+
+/* middle mobile phones/devices*/
+@media screen and (max-width: 500px) {
+ 
+    .heroImage {
+        width: 100%;
+        height: 100%;
+    } 
+
+     .hero__content {
+        width: 60%;
+        height: auto;
+        top: 70px;
+        padding: .5em;
+        margin-left: .2rem;
+     }
+
+     .hero__content-wellcome  {
+        font-size: .9rem;
+        padding: auto;
+    }
+    
+    .hero__content-h1 {
+        font-size: 1.3rem;
+        line-height: 1.1em;
+        padding-top: .2em;
+    }
+
+    .hero__content-p {
+        display: none;
+    }
+} 
+
+/*  Large device eg, tabblets/bigger phones*/
+@media screen and (min-width: 1240px) {
+   
+    .hero__content {
+        width: 60%;
+        top: 150px;
+        left: 20px;
+        padding: 2em;
+        margin-left: 4rem;
+    }
+
+    .hero__content-h1 {
+        font-size: 4.5rem;
+    }
+    
+    .hero__content-p {
+        padding-top: .3rem;
+    }
+
+} 

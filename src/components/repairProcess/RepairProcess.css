@@ -1,0 +1,32 @@
+.repairProcess {
+    display: flex;
+    flex-flow: column;
+    background-color: var(--BGCOLOR);
+}
+
+.repairProcess-heading {
+    display: flex;
+    justify-content: center;
+    padding: .3em;
+    margin-bottom: 1.5em;
+}
+
+.repairProcess-heading h2 {
+    font-size: 2.5rem;
+    line-height: 70px;
+}
+
+.repairProcess__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:  wrap;
+}
+
+@media screen and (max-width: 500px) {
+    .repairProcess-heading h2 {
+        font-size: 1.7rem;
+        justify-content: center;
+        line-height: 35px;
+    }  
+}

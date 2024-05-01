@@ -1,0 +1,47 @@
+.repairCard {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin: .1em;
+    padding: .5rem;
+}
+
+.repairCard-icon {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    margin-bottom: 1.2em;
+}
+
+.repairCard-icon h2 {
+    font-size: 2.5rem;
+}
+
+.repairCard-icon h2:hover,
+.repairCard-icon h2:focus-visible {
+    transform: scale(1.2);
+}
+
+.repairCard-content {
+    max-width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+}
+
+.repairCard-content h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    padding: .2em;
+}
+
+.repairCard-content p {
+    padding: .2em 2em;
+}

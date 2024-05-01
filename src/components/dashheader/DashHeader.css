@@ -1,0 +1,127 @@
+/* || DASH HEADER */
+.dash__header {
+    background-color: var(--BGCOLOR-DARK);
+    border: 0 0 .1px solid var(--LIGHTTEXT-COLOR);
+    box-shadow: 0 0 15px var(--LIGHTTEXT-COLOR);
+    padding: 0.1em 1em;
+}
+
+.dash__header-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dash__header-menu {
+    display: none;
+}
+
+.dash__menu {
+    position: relative;
+}
+
+.dash__header svg {
+    cursor: pointer;
+}
+
+.dash__menu-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
+    background-color: var(--BGCOLOR-DARK);
+    text-align: start;
+    padding: .5em;
+    position: absolute;
+    top: 31px;
+    min-width: 210px;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+}
+
+.dash__menu-links {
+    width: 100%;
+    display: flex;
+    flex-flow: column; 
+}
+
+.dash__menu-links ul {
+    flex: 1;
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+}
+
+.dash__menu-links li {
+    flex: 1;
+    padding: .1em;
+    border-radius: 5px;
+    border-bottom: .1px solid var(--BORDER-BGCOLOR);
+}
+
+.dash__menu-links a,
+.dash__menu-links a:visited {
+   display: block;
+   color: var(--NAV-LINKCOLOR);
+   font-size: .8rem;
+   line-height: 23px;
+   text-transform: capitalize;
+   padding: .3em ;
+}
+
+.dash__menu-links a:hover,
+.dash__menu-links a:focus-visible {
+    color: var(--LINK-HOVER);
+    box-shadow: 0 0 15px var(--LIGHTTEXT-COLOR);
+}
+
+
+.dash__userInfo {
+    flex: 1;
+    width: 100%;
+}
+
+.dash__header-container-nav {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dash__header-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: .7em;
+}
+
+.icon-button-nav {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: none;
+    color: var(--WHITETEXT-COLOR);
+    display: grid;
+    place-content: center;
+}
+
+.icon-button-nav:hover,
+.icon-button-nav:focus-visible {
+    transform: scale(1.2);
+}
+
+.icon-button-nav[disabled] {
+    visibility: hidden;
+}
+
+/* medium devices  */
+@media screen and (max-width: 500px) {
+    .dash__header-menu {
+        display: block;
+        z-index: 1;
+    }
+
+    .dash__userInfo {
+        display: none;
+    }
+}

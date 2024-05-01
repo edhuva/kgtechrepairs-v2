@@ -1,12 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
+//persist login hook
 const usePersist = () => {
-    const [persist, setPersist] = useState(JSON.parse(localStorage.getItem("persist")) || false);
+
+  //get persist state
+  const [persist, setPersist] = useState(JSON.parse(localStorage.getItem("persist")) || false);
 
     useEffect(() => {
-        localStorage.setItem("persist", JSON.stringify(persist))
+      //store persist state
+      localStorage.setItem("persist", JSON.stringify(persist))
     }, [persist])
-    
+
   return [persist, setPersist]
 }
 
