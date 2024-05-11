@@ -78,7 +78,7 @@ const NewRepairOrderForm = ({ users, customers, employees }) => {
           draggable: true,
           progress: undefined,
           theme: "light",
-          })
+        })
     }
 
     return () => toast()

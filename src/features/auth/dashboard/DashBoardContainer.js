@@ -20,12 +20,19 @@ const DashBoardContainer = () => {
         }),
     })
 
+    console.log('Analysis')
+    console.log('users')
+    console.log(users?.length)
+
     //get employees
     const { employees } = useGetEmployeesQuery("EmployeesList", {
         selectFromResult: ({ data }) => ({
             employees: data?.ids.map( id => data?.entities[id])
         }),
     })
+
+    console.log('employees')
+    console.log(employees?.length)
 
     //get customers
     const { customers } = useGetCustomersQuery("CustomersList", {
@@ -34,12 +41,18 @@ const DashBoardContainer = () => {
         }),
     })
 
+    console.log('customers')
+    console.log(customers?.length)
+
     //get repairOrders
     const { repairOrders } = useGetRepairOrdersQuery("RepairOrdersList", {
         selectFromResult: ({ data }) => ({
             repairOrders: data?.ids.map( id => data?.entities[id])
         }),
     })
+
+    console.log('repair orders')
+    console.log(repairOrders?.length)
 
     //repairRequests
     const { repairRequests } = useGetRepairRequestsQuery("RepairRequestsList", {
@@ -48,6 +61,9 @@ const DashBoardContainer = () => {
         }),
     })
 
+    console.log('repair requests')
+    console.log(repairRequests?.length)
+
     //invoices
     const { invoices } = useGetInvoicesQuery("InvoicesList", {
         selectFromResult: ({ data }) => ({
@@ -55,8 +71,26 @@ const DashBoardContainer = () => {
         }),
     })
 
+    console.log('Analysis')
+    console.log('invoices')
+    console.log(invoices?.length)
+
     //if not true keep loading
-    if (!users?.length || !employees?.length || !customers?.length || !repairOrders?.length || !repairRequests?.length || !invoices?.length) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />
+    if (!users?.length || !employees?.length || !customers?.length || !repairOrders?.length || !repairRequests?.length || !invoices) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />
+
+    console.log('Analysis checked *******')
+    console.log('users')
+    console.log(users?.length)
+    console.log('employees')
+    console.log(employees?.length)
+    console.log('customers')
+    console.log(customers?.length)
+    console.log('repair orders')
+    console.log(repairOrders?.length)
+    console.log('repair requests')
+    console.log(repairRequests?.length)
+    console.log('invoices')
+    console.log(invoices?.length)
 
     //get current user
     const user = users.find(user => user.id === userid);

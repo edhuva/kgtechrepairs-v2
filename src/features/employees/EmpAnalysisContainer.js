@@ -40,7 +40,7 @@ const EmpAnalysisContainer = () => {
     })
 
     // if not true keep loading
-    if (!employees?.length || !customers?.length || !repairOrders?.length || !invoices?.length) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />
+    if (!employees || !customers || !repairOrders || !invoices) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />
     
     //employees analysis
     const employeesAnalysed = employees.map( employee => {

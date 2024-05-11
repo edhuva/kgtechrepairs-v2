@@ -14,7 +14,7 @@ const Home = () => {
       <Brand />
       <Service />
       <RepairProcess />
-      <About />
+      <About aboutBtn={true}/>
       <HomeCard />
     </div>
   )

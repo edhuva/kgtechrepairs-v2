@@ -81,14 +81,14 @@ const InvoicesList = () => {
       filteredIds = ids.filter(invoiceId => entities[invoiceId].customer === username);
     }
 
-    count = filteredIds.length;
+    count = filteredIds?.length;
 
-    const tableContent = ids?.length 
+    const tableContent = filteredIds?.length 
     ? filteredIds.map(invoiceId => <Invoice key={invoiceId} invoiceId={invoiceId} />)
     : null; 
 
     content = (
-      tableContent.length
+      tableContent?.length
         ? 
             <table className={isCustomer ? "table table__custInvoices table__margin" : "table table__invoices table__margin"}>
             <thead className="table__thead">

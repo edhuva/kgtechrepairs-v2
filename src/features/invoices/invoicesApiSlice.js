@@ -65,7 +65,7 @@ export const invoicesApiSlice = apiSlice.injectEndpoints({
                 body: { id }
             }),
             invalidatesTags: (result, error, arg) => [
-                { type: 'RepairOrder', id: arg.id }
+                { type: 'Invoice', id: arg.id }
             ]
         })
     }),

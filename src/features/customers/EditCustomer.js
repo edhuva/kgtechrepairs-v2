@@ -3,7 +3,7 @@ import { useGetCustomersQuery } from "./customerApiSlice";
 import { useGetUsersQuery } from '../users/usersApiSlice';
 import PulseLoader from 'react-spinners/PulseLoader';
 import EditCustomerForm from "./EditCustomerForm";
-import useTitle from "../../hooks/useTitle";
+import useTitle from '../../hooks/useTitle';
 
 // Edit Customer
 const EditCustomer = () => {

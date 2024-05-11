@@ -24,7 +24,6 @@ const NewEmployeeForm = () => {
   useTitle('KGTech: New Employee');
 
   const userRef = useRef();
-  const errRef = useRef();
 
   // addNewEmployee Mutation
   const [addNewEmployee, {
@@ -57,8 +56,6 @@ const NewEmployeeForm = () => {
   const [roles, setRoles] = useState(["User"]);
   const [experties, setExperties] = useState(["Hardware"]);
 
-  const [errorMsg, setErrorMsg] = useState('');
-
   useEffect(() => {
     userRef.current.focus();
   }, [])
@@ -83,10 +80,6 @@ const NewEmployeeForm = () => {
     setValidPassword(PWD_REGEX.test(password));
     setValidMatchPwd(password === matchPwd);
   }, [password, matchPwd])
-
-  useEffect(() => {
-    setErrorMsg('');
-  }, [username, fullname, phoneNo, email, password, matchPwd])
 
   useEffect(() => {
     if (isSuccess) {
@@ -208,14 +201,13 @@ const NewEmployeeForm = () => {
   contentLoading = isLoading && <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />;
 
   let errContent;
-  errContent = errorMsg && errorMsg;
   errContent = error?.data?.message ? error.data.message : 'Network Error';
 
   const content = (
     <>
     {contentLoading}
     <Notify />
-    <p ref={errRef} className={errClass}>{errContent}</p>
+    <p className={errClass}>{errContent}</p>
 
     <div className='form__container'>
       <form className='form' onSubmit={(e) => e.preventDefault()}>

@@ -1,25 +1,25 @@
 import { useEffect } from 'react';
-import { useGetCustomersQuery } from "./customerApiSlice"
+import { useGetSubscriptionsQuery } from './subscriptionsApiSlice';
 import { PulseLoader } from "react-spinners";
 import { toast } from 'react-toastify';
 import Notify from '../../components/notify/Notify';
-import Customer from './Customer';
+import Subscription from './Subscription';
 import DashTableContent from "../auth/dashboard/DashTableContent";
 import useTitle from '../../hooks/useTitle';
 
-// Customers LIst
-const CustomersLIst = () => {
+// Subscriptions LIst
+const SubscriptionsList = () => {
 
-  useTitle('KGTech: Customers');
+    useTitle('KGTech: Subscriptions');
 
-  // get customers
+    // get subscriptions
   const {
-    data: customers,
+    data: subscriptions,
     isLoading,
     isSuccess,
     isError,
     error
-  } = useGetCustomersQuery(undefined, {
+  } = useGetSubscriptionsQuery(undefined, {
     pollingInterval: 60000,
     refetchOnFocus: true,
     refetchOnMountOrArgChange: true
@@ -69,10 +69,10 @@ const CustomersLIst = () => {
 
   if (isSuccess) {
     //if successfull
-    const { ids } = customers;
+    const { ids } = subscriptions;
 
     const tableContent = ids?.length 
-      ? ids.map(customerId => <Customer key={customerId} customerId={customerId} />)
+      ? ids.map(subscriptionId => <Subscription key={subscriptionId} subscriptionId={subscriptionId} />)
       : null;
 
     count= ids.length;
@@ -80,15 +80,14 @@ const CustomersLIst = () => {
     content = (
       tableContent?.length
       ? 
-        <table className="table table__customers table__margin">
+        <table className="table table__contacts table__margin">
           <thead className="table__thead">
             <tr>
-              <th scope="col" className="table__th user__username">Username</th>
-              <th scope="col" className="table__th user__email">Fullname</th>
-              <th scope="col" className="table__th user__roles">PhoneNo</th>
+              <th scope="col" className="table__th user__status">Status</th>
               <th scope="col" className="table__th user__email">Email</th>
+              <th scope="col" className="table__th date__created">created</th>
+              <th scope="col" className="table__th date__updated">Updated</th>
               <th scope="col" className="table__th user__edit">Edit</th>
-              <th scope='col' className='table__th repairOrder__view'> Details</th>
             </tr>
           </thead>
 
@@ -96,17 +95,16 @@ const CustomersLIst = () => {
             {tableContent}
           </tbody>
         </table>
-      : <p>Empty Customer Table</p>
+      : <p>Empty Subscriptions Table</p>
     )
   }
 
-
   return (
     <>
-      <DashTableContent title="Customers List" subTitle={`List of all customers (${count}) `} content={content} />
+      <DashTableContent title="Contacts List" subTitle={`List of all new contacts (${count}) `} content={content} />
       <Notify />
     </>
   )
 }
 
-export default CustomersLIst
+export default SubscriptionsList

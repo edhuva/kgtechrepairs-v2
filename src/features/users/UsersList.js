@@ -94,7 +94,7 @@ const UsersList = () => {
     
     content = (
       
-      tableContent
+      tableContent?.length
         ? 
           <table className="table table__users">
             <thead className="table__thead">

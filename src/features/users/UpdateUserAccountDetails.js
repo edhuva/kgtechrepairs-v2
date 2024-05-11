@@ -16,7 +16,6 @@ const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const UpdateUserAccountDetails = ({ user }) => {
 
     const userRef = useRef();
-    const errRef = useRef();
 
     // updateUser Mutation
     const [updateUser, {
@@ -35,8 +34,6 @@ const UpdateUserAccountDetails = ({ user }) => {
     const [validPassword, setValidPassword] = useState(false);
     const [passwordFocus, setPasswordFocus] =useState(false);
 
-    const [errorMsg, setErrorMsg] = useState('');
-
     useEffect(() => {
         userRef.current.focus();
     }, [])
@@ -48,10 +45,6 @@ const UpdateUserAccountDetails = ({ user }) => {
     useEffect(() => {
         setValidPassword(PWD_REGEX.test(password));
     }, [password])
-  
-    useEffect(() => {
-      setErrorMsg('');
-    }, [username, password])
 
     useEffect(() => {
         if(isSuccess ) {
@@ -122,7 +115,6 @@ const UpdateUserAccountDetails = ({ user }) => {
         canSave = [ validUsername, validPassword ].every(Boolean) && !isLoading;
     } 
     else if (username && !password ){
-        console.log('passwordfalse')
         canSave = [validUsername].every(Boolean) && !isLoading;
     }
 
@@ -132,7 +124,6 @@ const UpdateUserAccountDetails = ({ user }) => {
     contentLoading = (isLoading) && <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />;
 
     let errContent;
-    errContent = errorMsg && errorMsg;
     errContent = error?.data?.message ?? 'Network Error';
 
     const title = (
@@ -148,7 +139,7 @@ const UpdateUserAccountDetails = ({ user }) => {
         <>
           {contentLoading}
           <Notify />
-          <p ref={errRef} className={errClass}>{errContent}</p>
+          <p className={errClass}>{errContent}</p>
           
           <div className='form__container'>
             <form className='form' onSubmit={e => e.preventDefault()}>

@@ -1,29 +1,25 @@
 import { useEffect } from 'react';
-import { useGetEmployeesQuery } from "./employeesApiSlice";
+import { useGetContactsQuery } from './contactsApiSlice';
 import { PulseLoader } from "react-spinners";
 import { toast } from 'react-toastify';
 import Notify from '../../components/notify/Notify';
-import './Employee';
-import Employee from "./Employee";
+import Contact from './Contact';
 import DashTableContent from "../auth/dashboard/DashTableContent";
 import useTitle from '../../hooks/useTitle';
-import useAuth from '../../hooks/useAuth';
 
-// Employees List
-const EmployeesList = () => {
+// Contacts LIst
+const ContactsList = () => {
 
-  useTitle('KGTech: Employees');
+    useTitle('KGTech: Contacts');
 
-  const {username, isAdmin, authRistrictLevel, defaultPlaceHolder} = useAuth();
-
-  // get employees
+    // get contacts
   const {
-    data: employees,
+    data: contacts,
     isLoading,
     isSuccess,
     isError,
     error
-  } = useGetEmployeesQuery(undefined, {
+  } = useGetContactsQuery(undefined, {
     pollingInterval: 60000,
     refetchOnFocus: true,
     refetchOnMountOrArgChange: true
@@ -31,7 +27,7 @@ const EmployeesList = () => {
 
   useEffect(() => {
     if (isError) {
-      // error notification
+      //error notification
       error?.data?.message ?
        toast.error(error.data.message, {
         position: "top-right",
@@ -65,58 +61,51 @@ const EmployeesList = () => {
 
   if (isError) {
     content = error?.data?.message
-    ? <p className="errmsg">{error.data.message}</p>
-    : <p className="errmsg">Network Error!</p>
+     ? <p className="errmsg">{error.data.message}</p>
+     : <p className="errmsg">Network Error!</p>
   }
 
   let count = [];
 
   if (isSuccess) {
-    const { ids, entities } = employees;
+    //if successfull
+    const { ids } = contacts;
 
-    //authorization ristrict level
-    let filteredIds  = ids?.length ? ids.filter(employeeId => entities[employeeId].user !== authRistrictLevel && entities[employeeId].user !== defaultPlaceHolder) : null;
+    const tableContent = ids?.length 
+      ? ids.map(contactId => <Contact key={contactId} contactId={contactId} />)
+      : null;
 
-    if (isAdmin && username === authRistrictLevel) {
-      filteredIds = ids;
-    } 
-
-    // if true create table content
-    const tablecontent = filteredIds?.length 
-    ? filteredIds.map(employeeId => <Employee key={employeeId} employeeId={employeeId} />)
-    : null;
-
-    count = filteredIds.length;
+    count= ids.length;
 
     content = (
-      tablecontent?.length
+      tableContent?.length
       ? 
-        <table className="table table__employee table__margin">
+        <table className="table table__contacts table__margin">
           <thead className="table__thead">
             <tr>
-              <th scope="col" className="table__th">Username</th>
-              <th scope="col" className="table__th user__email">Fullname</th>
-              <th scope="col" className="table__th user__roles">PhoneNo</th>
+              <th scope="col" className="table__th user__status">Status</th>
               <th scope="col" className="table__th user__email">Email</th>
+              <th scope="col" className="table__th user__message">Message</th>
               <th scope="col" className="table__th user__edit">Edit</th>
               <th scope='col' className='table__th repairOrder__view'> Details</th>
             </tr>
           </thead>
 
-          <tbody>
-            {tablecontent}
+          <tbody className="table__body">
+            {tableContent}
           </tbody>
         </table>
-      : <p>Empty Employee Table</p>
-    ) 
+      : <p>Empty Contacts Table</p>
+    )
   }
+
 
   return (
     <>
-      <DashTableContent title="Employees List" subTitle={`List of all employees (${count}) `} content={content} />
+      <DashTableContent title="Contacts List" subTitle={`List of all new contacts (${count}) `} content={content} />
       <Notify />
     </>
   )
 }
 
-export default EmployeesList
+export default ContactsList

@@ -17,7 +17,6 @@ const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const EditUserForm = ({ user }) => {
 
   const userRef = useRef();
-  const errRef = useRef();
 
   // updateUser Mutation
   const [updateUser, {
@@ -45,8 +44,6 @@ const EditUserForm = ({ user }) => {
   const [roles, setRoles] = useState(user.roles);
   const [active, setActive] = useState(user.active);
 
-  const [errorMsg, setErrorMsg] = useState('');
-
   useEffect(() => {
     userRef.current.focus();
   }, [])
@@ -58,10 +55,6 @@ const EditUserForm = ({ user }) => {
   useEffect(() => {
       setValidPassword(PWD_REGEX.test(password));
   }, [password])
-
-  useEffect(() => {
-    setErrorMsg('');
-  }, [username, password])
 
   useEffect(() => {
     if(isSuccess ) {
@@ -196,14 +189,13 @@ const EditUserForm = ({ user }) => {
   Contentload = isDelSuccess && <p>User Successfuly Deleted</p>
   
   let errContent;
-     errContent = errorMsg && errorMsg;
      errContent = (error?.data?.message || delerror?.data?.message) ?? 'Network Error';
 
   const content = (
     <>
       {Contentload}
       <Notify />
-      <p ref={errRef} className={errClass}>{errContent}</p>
+      <p className={errClass}>{errContent}</p>
       
       <div className='form__container'>
         <form className='form' onSubmit={e => e.preventDefault()}>

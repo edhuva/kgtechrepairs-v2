@@ -20,7 +20,6 @@ const NewUserForm = () => {
   useTitle('KGTech: New User');
 
   const userRef = useRef();
-  const errRef = useRef();
 
     // addNewUse Mutation
     const [addNewUser, {
@@ -43,8 +42,6 @@ const NewUserForm = () => {
     const [matchPwdFocus, setMatchPwdFocus] =useState(false);
     const [roles, setRoles] = useState(["User"]);
 
-    const [errorMsg, setErrorMsg] = useState('');
-
     useEffect(() => {
       userRef.current.focus();
     }, [])
@@ -57,11 +54,6 @@ const NewUserForm = () => {
       setValidPassword(PWD_REGEX.test(password));
       setValidMatchPwd(password === matchPwd);
     }, [password, matchPwd])
-
-    useEffect(() => {
-      setErrorMsg('');
-    }, [username, password, matchPwd])
-  
 
     useEffect(() => {
       if (isSuccess) {
@@ -152,14 +144,13 @@ const NewUserForm = () => {
     let Contentload;
     Contentload = isLoading && <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />;
     let errContent;
-     errContent = errorMsg && errorMsg;
      errContent = error?.data?.message ? error.data.message : 'Network Error';
 
   const content = (
     <>
       {Contentload}
       <Notify />
-      <p ref={errRef} className={errClass}>{errContent}</p>
+      <p className={errClass}>{errContent}</p>
       
       <div className='form__container'>
         <form className='form' onSubmit={e => e.preventDefault()}>

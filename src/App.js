@@ -53,6 +53,11 @@ import NewUserForm from './features/users/NewUserForm';
 import EditUser from './features/users/EditUser';
 import UpdateUserAccount from './features/users/UpdateUserAccount';
 import UserAccount from './features/users/UserAccount';
+import ContactsList from './features/contacts/ContactsList';
+import EditContact from './features/contacts/EditContact';
+import ViewContact from './features/contacts/ViewContact';
+import SubscriptionsList from './features/subscriptions/SubscriptionsList';
+import EditSubscription from './features/subscriptions/EditSubscription';
 import { ROLES } from './config/roles';
 import './App.css';
 
@@ -162,6 +167,22 @@ function App() {
                         <Route path="reqnewrepairorder/:id" element={<ReqNewRepairOrder />} />
                       </Route>
                     </Route>
+
+                    <Route path="contacts">
+                      <Route element={<RequireAuth allowedRoles={[ROLES.Employee, ROLES.Manager, ROLES.Admin]} />}>
+                        <Route index element={<ContactsList />} />
+                        <Route path=":id" element={<EditContact />} />
+                        <Route path="view/:id" element={<ViewContact />} />
+                      </Route>
+                    </Route>
+
+                    <Route path="subscriptions">
+                      <Route element={<RequireAuth allowedRoles={[ROLES.Employee, ROLES.Manager, ROLES.Admin]} />}>
+                        <Route index element={<SubscriptionsList />} />
+                        <Route path=":id" element={<EditSubscription />} />
+                      </Route>
+                    </Route>
+
                   </Route>{/* End Dash */}
                 </Route> 
               </Route>

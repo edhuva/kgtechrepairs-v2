@@ -82,7 +82,7 @@ const RepairOrdersAssignedList = () => {
       : null;
 
     content = (
-      tableContent.length 
+      tableContent?.length
         ? 
           <table className="table table__repairOrders">
             <thead className="table__thead">
@@ -104,7 +104,7 @@ const RepairOrdersAssignedList = () => {
               {tableContent}
             </tbody>
           </table>
-        : <p>Empty Assigned Repair Orders Table</p>
+        : <p>Empty Assigned Repair Orders</p>
     )
   }
 

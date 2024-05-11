@@ -88,7 +88,7 @@ const RepairOrdersList = () => {
       : null;
 
     content = (
-      tableContent.length 
+      tableContent?.length
         ? 
           <table className={isCustomer ? "table table__custRepairOrders" : "table table__repairOrders"}>
             <thead className="table__thead">

@@ -291,14 +291,14 @@ const EditRepairOrderForm = ({ repairOrder, customers, employees }) => {
                 {/* dates */}
                 <div className="input--divider top-padding bg-light padding border">
                     <div className="row--select">
-                      <label className='label' htmlFor='custUsername'>
+                      <label className='label' htmlFor='created'>
                         CREATED: </label>
                       <p>{created}</p>
                     </div>
                   </div>
                   <div className="input--divider bg-light padding border">
                   <div className="row--select">
-                    <label className='label' htmlFor='custUsername'>
+                    <label className='label' htmlFor='updated'>
                       UPDATED: </label>
                     <p>{updated}</p>
                   </div>

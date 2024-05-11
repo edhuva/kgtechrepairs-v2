@@ -37,7 +37,7 @@ const CustAnalysisContainer = () => {
     })
 
     //if not true keep loading
-    if (!customers?.length || !repairOrders?.length || !repairRequests?.length || !invoices?.length) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />
+    if (!customers || !repairOrders || !repairRequests || !invoices) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />
 
     //customer analysis
     const customersAnalysed = customers.map( customer => {

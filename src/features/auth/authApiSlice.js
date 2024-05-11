@@ -35,6 +35,30 @@ export const authApiSlice = apiSlice.injectEndpoints({
                 { type: 'Employee', id: 'LIST' }
             ]
         }),
+        addNewSubscription: builder.mutation({
+            query: initialSubscriptionData => ({
+                url: '/auth/subscriptions',
+                method: 'POST',
+                body: {
+                    ...initialSubscriptionData
+                }
+            }),
+            invalidatesTags: [
+                { type: 'Subscription', id: 'LIST'}
+            ]
+        }),
+        addNewContact: builder.mutation({
+            query: initialContactData => ({
+                url: '/auth/contacts',
+                method: 'POST',
+                body: {
+                    ...initialContactData
+                }
+            }),
+            invalidatesTags: [
+                { type: 'Contact', id: 'LIST'}
+            ]
+        }),
         sendLogout: builder.mutation({
             query: () => ({
                 url: '/auth/logout',
@@ -79,6 +103,8 @@ export const {
     useLoginMutation,
     useRegisterCustomerMutation,
     useRegisterEmployeeMutation,
+    useAddNewSubscriptionMutation,
+    useAddNewContactMutation,
     useSendLogoutMutation,
     useRefreshMutation,
 } = authApiSlice

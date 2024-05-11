@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import './About.css';
 
 // About
-const About = () => {
+const About = ({ aboutBtn}) => {
   return (
     <section className='home__about section__margin'>
         <div className='home__about-info'>
@@ -18,16 +19,20 @@ const About = () => {
               <p>
               We are the computer repair experts and our technicians have already successfully repaired thousands of windows and apple devices nationwide. our entire focus is on providing you with the highest quality walk-in and walk-out repairs and servicing along with exceptional customer focused experience service across south africa.
               </p>
-
+              {aboutBtn &&
               <ul>
                 <li>we are able to carry out repairs on most makes of desktop and laptop devices.</li>
                 <li>	we provide repair solutions for many individuals, corporates, retailers and insurance companies</li>
                 <li>we have a team of certified and qualified technicians who work to very high standards.</li>
-              </ul>
+              </ul>}
             </div>
-            <div className='home-about-button'>
-              <button type='button'>find out more <FontAwesomeIcon icon={faArrowAltCircleRight} /> </button>
-            </div>
+            {aboutBtn &&
+              <Link to='about'>
+                <div className='home-about-button'>
+                  <button type='button'>find out more <FontAwesomeIcon icon={faArrowAltCircleRight} /> </button>
+              </div>
+              </Link>
+            }
           </div>
         </div>
         <div className='home__about-img'>

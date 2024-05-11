@@ -15,7 +15,7 @@ const ViewInvoiceDetails = ({ invoice }) => {
   const handleBackToRepairOrder = () => navigate(`/private/dash/repairorders/view/${invoice.repairOrderId}`);
   const handleBackToInvoices = () => navigate('/private/dash/invoices');
 
-  const created = new Date(invoice.createdAt).toLocaleString('en-SA', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'});
+    const created = new Date(invoice.createdAt).toLocaleString('en-SA', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'});
     const updated = new Date(invoice.updatedAt).toLocaleString('en-SA', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'});
     
   const content = (

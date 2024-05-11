@@ -1,0 +1,107 @@
+.contact__container {
+    padding: 7em 0em 1em 1em;
+}
+
+.contact__row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items:flex-start;
+    gap: 1em;
+}
+
+.contact {
+    flex: 1;
+    display: flex;
+    justify-content:flex-start;
+    padding: .5em 0em 0em .5em;
+}
+
+.contact__logo {
+    padding: 1em 0em;
+}
+
+.contact__form {
+    flex: 1;
+    display: flex;
+}
+
+
+.contact__title {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: .5em;
+}
+
+.contact__title a,
+.contact__title a:visited {
+    background: linear-gradient(to right, rgba(0, 168, 253), #AE67FA 35%, #e00a95);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact__title a:hover,
+.contact__title a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+
+.contact__title h1 {
+    font-size: 1.9rem;
+}
+
+.contact-title-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2em;
+}
+
+.contact__content {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.2em;
+    color: var(--TEXT-COLOR);
+}
+
+.contact__addr a,
+.contact__addr a:visited {
+    color: var(--LIGHTTEXT-COLOR);
+}
+
+.contact__addr a:hover,
+.contact__addr a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+
+
+/* middle device eg, tabblets/bigger phones*/
+@media screen and (max-width: 700px) {
+    .contact__container {
+        padding: 5em .5em 1em .5em;
+    }
+
+    .contact {
+        background-color: var(--BGCOLOR);
+    }
+
+    .contact__addr {
+        font-size: .9rem;
+    }
+}
+
+ /* Large device eg, tabblets/bigger phones */
+ @media screen and (min-width: 1240px) {
+    .contact__container {
+        padding: 7em 0em 1em 7em;
+    }
+
+    .contact__title h1 {
+        font-size: 3rem;
+    }
+
+    .contact {
+        padding: .5em 0em 0em 3em;
+    }
+} 

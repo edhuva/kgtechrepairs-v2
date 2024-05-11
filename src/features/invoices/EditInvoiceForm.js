@@ -65,7 +65,7 @@ const EditInvoiceForm = ({ invoice, repairOrders }) => {
           setTotalAmount('')
          
           navigate('/private/dash/invoices');
-          window.location.reload();
+        //   window.location.reload();
         }
         
         return () => toast()
@@ -121,7 +121,7 @@ const EditInvoiceForm = ({ invoice, repairOrders }) => {
     //Save Invoice
     const onSaveInvoiceClicked = async () => {
         if (canSave) {
-          await updateInvoice({ id: invoice.id, repairOrderId: invoice.repairOrderId, customer: invoice.customer, employee: invoice.employee, deviceType: invoice.deviceType, totalAmount: totalAmount, paid: paid })
+          await updateInvoice({ id: invoice.id, repairOrderId: invoice.repairOrderId, customer: invoice.customer, employee: invoice.employee, deviceType: invoice.deviceType, serialNo: invoice.serialNo, totalAmount: totalAmount, paid: paid })
         }
         
     }

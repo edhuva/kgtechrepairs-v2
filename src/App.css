@@ -179,6 +179,16 @@ tr {
     grid-template-columns: repeat(1, 1fr) repeat(1, 0.5fr) repeat(3, 1fr) repeat(1, 0.5fr) repeat(2, 1fr);
 }
 
+/* || TABLE - CONTACTS */
+.table__contacts {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* || TABLE - SUBSCRIPTIONS */
+.table__subscriptions {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 /* || FORM */
 .form {
     display: flex;

@@ -20,7 +20,6 @@ const PHONENO_REGEX = /^[0-9+]{10,15}$/
 const EditCustomerForm = ({ customer, user }) => {
 
     const userRef = useRef();
-    const errRef = useRef();
 
     // updateCustomer Mutation
     const [updateCustomer, {
@@ -57,8 +56,6 @@ const EditCustomerForm = ({ customer, user }) => {
     const [passwordFocus, setPasswordFocus] =useState(false);
     const [active, setActive] = useState(user.active);
 
-    const [errorMsg, setErrorMsg] = useState('');
-
     useEffect(() => {
         userRef.current.focus();
     }, [])
@@ -82,11 +79,6 @@ const EditCustomerForm = ({ customer, user }) => {
     useEffect(() => {
         setValidPassword(PWD_REGEX.test(password));
     }, [password])
-
-    useEffect(() => {
-        setErrorMsg('');
-    }, [username, fullname, phoneNo, email, password])
-    
 
     useEffect(() => {
         if (isSuccess ) {
@@ -121,7 +113,7 @@ const EditCustomerForm = ({ customer, user }) => {
           setEmail('')
           setPassword('')
             navigate(`/private/dash/customers`)
-            window.location.reload();
+            // window.location.reload();
         }
     }, [isDelSuccess, navigate])
 
@@ -210,7 +202,7 @@ const EditCustomerForm = ({ customer, user }) => {
     contentLoading = (isLoading || isDelLoading) && <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />;
 
     let errContent;
-    errContent = errorMsg && errorMsg;
+
     errContent = (error?.data?.message || delerror?.data?.message) ?? 'Network Error';
 
     
@@ -218,7 +210,7 @@ const EditCustomerForm = ({ customer, user }) => {
         <>
         {contentLoading}
         <Notify />
-        <p ref={errRef} className={errClass}>{errContent}</p>
+        <p className={errClass}>{errContent}</p>
                 
         <div className='form__container'>
             <form className='form' onSubmit={e => e.preventDefault()}>

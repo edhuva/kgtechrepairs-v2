@@ -22,7 +22,6 @@ const PHONENO_REGEX = /^[0-9+]{10,15}$/
 const EditEmployeeForm = ({ employee, user }) => {
 
   const userRef = useRef();
-  const errRef = useRef();
 
   // updateEmployee Mutation
     const [updateEmployee, {
@@ -61,12 +60,6 @@ const EditEmployeeForm = ({ employee, user }) => {
     const [experties, setExperties] = useState(employee.experties);
     const [active, setActive] = useState(user.active);
 
-    const [errorMsg, setErrorMsg] = useState('');
-
-    useEffect(() => {
-      userRef.current.focus();
-    }, [])
-
     useEffect(() => {
         setValidUsername(USERNAME_REGEX.test(username));
     }, [username])
@@ -86,10 +79,6 @@ const EditEmployeeForm = ({ employee, user }) => {
     useEffect(() => {
       setValidPassword(PWD_REGEX.test(password));
     }, [password])
-
-    useEffect(() => {
-      setErrorMsg('');
-    }, [username, fullname, phoneNo, email, password])
 
     useEffect(() => {
         if (isSuccess ) {
@@ -132,7 +121,7 @@ const EditEmployeeForm = ({ employee, user }) => {
         setExperties([]);
        
         navigate('/private/dash/employees');
-        window.location.reload();
+        // window.location.reload();
       }
           
     }, [isDelSuccess, navigate])
@@ -252,14 +241,13 @@ const EditEmployeeForm = ({ employee, user }) => {
     contentLoading = (isLoading || isDelLoading) && <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />;
 
     let errContent;
-    errContent = errorMsg && errorMsg;
     errContent = (error?.data?.message || delerror?.data?.message) ?? 'Network Error';
 
     const content = (
         <>
         {contentLoading}
         <Notify />
-        <p ref={errRef} className={errClass}>{errContent}</p>
+        <p className={errClass}>{errContent}</p>
     
         <div className='form__container'>
           <form className='form' onSubmit={e => e.preventDefault()}>
