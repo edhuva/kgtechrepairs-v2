@@ -7,11 +7,9 @@ import Home from './publicPages/Home';
 import Company from './publicPages/company/Company';
 import ContactUs from './publicPages/contact/ContactUs';
 import DataRecovery from './publicPages/dataRecovery/DataRecovery';
-import DesktopRepairs from './publicPages/desktopRepairs/DesktopRepairs';
-import LaptopRepairs from './publicPages/laptopRepairs/LaptopRepairs';
+import ComputerRepairs from './publicPages/computerRepairs/ComputerRepairs';
 import Parts from './publicPages/parts/Parts';
 import PrivacyPolicy from './publicPages/privacyPolicy/PrivacyPolicy';
-import ReturnsPolicy from './publicPages/returnsPolicy/ReturnsPolicy';
 import Support from './publicPages/support/Support';
 import TermsAndConds from './publicPages/terms&Conditions/TermsAndConds';
 import Login from './features/auth/login/Login';
@@ -68,11 +66,9 @@ function App() {
           <Route path='about' element={<Company />} />
           <Route path='contactus' element={<ContactUs />} />
           <Route path='datarecovery' element={<DataRecovery />} />
-          <Route path='desktoprepairs' element={<DesktopRepairs />} />
-          <Route path='laptoprepairs' element={<LaptopRepairs />} />
+          <Route path='computerrepairs' element={<ComputerRepairs />} />
           <Route path='parts' element={<Parts />} />
           <Route path='privacypolicy' element={<PrivacyPolicy />} />
-          <Route path='returnspolicy' element={<ReturnsPolicy />} />
           <Route path='support' element={<Support />} />
           <Route path='login' element={<Login />} />
           <Route path='signup' element={<NewCustomerSignup />} />

@@ -345,8 +345,10 @@ const NewEmployeeSignup = () => {
   )
 
   return(
-    <div className='public__form-section'>
+    <div className='bg__img'>
+      <div className='public__form-section'>
         <DashFormContainer title='Employee Registration' content={content} />
+      </div>
     </div>
   )
 }

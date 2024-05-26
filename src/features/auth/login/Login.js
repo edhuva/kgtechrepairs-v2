@@ -173,8 +173,10 @@ const Login = () => {
   )
 
   return (
-    <div className='public__form-section'>
-      <DashFormContainer title='Login' content={content} />
+    <div className='bg__img'>
+      <div className='public__form-section'>
+        <DashFormContainer title='Login' content={content} />
+      </div>
     </div>
   )
 }

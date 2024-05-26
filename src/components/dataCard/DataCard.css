@@ -1,0 +1,17 @@
+.recvry__card {
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__title {
+    font-size: 1.4rem;
+    padding: .5em 0em 1em;
+}
+
+.card__text {
+    line-height: 1.6rem;
+}

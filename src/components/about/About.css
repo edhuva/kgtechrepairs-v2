@@ -32,16 +32,6 @@
     padding: .5em;
 }
 
-.home__about-title {
-    padding: .3em;
-    margin-bottom: .8em;
-}
-
-.home__about-title h2{
-    font-size: 2.5rem;
-    line-height: 35px;
-}
-
 .home__about-content {
     display: flex;
     flex-flow: column;

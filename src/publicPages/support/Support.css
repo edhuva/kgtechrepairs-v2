@@ -1,0 +1,109 @@
+.support__title {
+    font-size: 1.9rem;
+    padding: 1em 0em  .5em 2em;
+}
+
+.support__container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 0em;
+}
+
+.support__top {
+    display: flex;
+    flex-flow: column wrap;
+}
+.support__top h3 {
+    font-size: 1.5rem;
+    padding-top: 1em;
+    padding-bottom: .8em;
+}
+
+.support__top p {
+    line-height: 1.9em;
+}
+
+.support__top-p ul li, 
+.support__top-p p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-top: .3em;
+    margin-left: 1em;
+}
+
+.support__top-p ul li {
+    padding: .5em;
+}
+
+.support__container h3 {
+    font-size: 1.5rem;
+    padding-top: 1em;
+    padding-bottom: .8em;
+}
+
+.support__mail-in {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.mail__aside {
+    display: flex;
+    flex-flow: column;
+}
+
+.support__card-div {
+    padding-top: 1em;
+}
+
+.support__card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.support__card .recvry__card {
+    width: 100px;
+}
+
+.support__mail-in  p{
+    line-height: 1.9em;
+}
+
+.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .support__title {
+        font-size: 1.4rem;
+        padding: 1em 0em  .1em .3em;
+    }
+
+    .support__top-p ul, 
+    .support__top-p p {
+        font-size: 1rem;
+        font-weight: 600;
+        padding-top: .4em;
+    }
+
+    .recovry-img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* larger  */
+@media screen and (min-width: 800px) {
+    .support__top {
+        width: 80%;
+    }
+
+    .mail__aside {
+        width: 80%;
+    }
+} 

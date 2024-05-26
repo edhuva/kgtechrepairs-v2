@@ -5,7 +5,7 @@ import './HomeCard.css';
 // Home Card
 const HomeCard = () => {
   return (
-    <section className='homeCard '>
+    <section className='homeCard bg__img'>
       <div className='homeCard__container'>
         <RepairCard icon={faSquarePollVertical} title="Specialization" text="* We’re a small group of professionals and specialists in Port Elizabeth town who specialise in fast and customer focused repairs and computer support services at affordable price. a SA’s no.1 computer repair specialists trusted by +100,000 customers nationwide. request a service that’s there before you need it!" />
         

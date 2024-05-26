@@ -8,9 +8,9 @@ import './Navbar.css';
 const Menu = () => (
     <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="datarecovery">Data Recovery</Link></li>
+        <li><Link to="computerrepairs">Repairs</Link></li>
         <li><Link to="parts">Parts</Link></li>
-        <li><Link to="support">Support</Link></li>
+        <li><Link to="datarecovery">Data Recovery</Link></li>
         <li><Link to="about">Company</Link></li>
         <li><Link to="contactus">Contact Us</Link></li>
     </ul>

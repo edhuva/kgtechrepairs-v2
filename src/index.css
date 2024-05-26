@@ -29,6 +29,8 @@
     --LIGHTTEXT-COLOR: #81AFDD;
     --TEXT-COLOR: #041527cb;
     --WHITETEXT-COLOR: whitesmoke;
+    --WHITE-COLOR: #FFF;
+    --LIGHTDARK-COLOR: #3333339f;
     --SUBTEXT-COLOR: #FF8A71;
     --ERROR: firebrick;
     --INACTIVE: lightgray;
@@ -86,6 +88,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 .margin {

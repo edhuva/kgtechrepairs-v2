@@ -140,8 +140,7 @@ const Footer = () => {
 
                 <div className='footer__links'>
                     <h4>Service</h4>
-                    <NavLink to='desktoprepairs'><i><FontAwesomeIcon icon={faAngleRight} /></i>Desktop Repairs</NavLink>
-                    <Link to='laptoprepairs'><i><FontAwesomeIcon icon={faAngleRight} /></i>Laptop Repairs</Link>
+                    <NavLink to='computerrepairs'><i><FontAwesomeIcon icon={faAngleRight} /></i>Computer Repairs</NavLink>
                     <Link to='datarecovery'><i><FontAwesomeIcon icon={faAngleRight} /></i>Data Recovery</Link>
                     <Link to='support'><i><FontAwesomeIcon icon={faAngleRight} /></i>Support</Link>
                     <Link to='parts'><i><FontAwesomeIcon icon={faAngleRight} /></i>Parts</Link>
@@ -152,7 +151,6 @@ const Footer = () => {
                     <Link to='about'><i><FontAwesomeIcon icon={faAngleRight} /></i>About Us</Link>
                     <Link to='contactus'><i><FontAwesomeIcon icon={faAngleRight} /></i>Contact Us</Link>
                     <Link to='terms&conditions'><i><FontAwesomeIcon icon={faAngleRight} /></i>Terms & Conditions</Link>
-                    <Link to='returnspolicy'><i><FontAwesomeIcon icon={faAngleRight} /></i>Returns Policy</Link>
                     <Link to='privacypolicy'><i><FontAwesomeIcon icon={faAngleRight} /></i>Privacy Policy</Link>
                 </div>
 

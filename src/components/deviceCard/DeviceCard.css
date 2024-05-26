@@ -1,0 +1,67 @@
+.deviceCard {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    border-radius: 2%;
+    background-color: var(--WHITE-COLOR);
+    border: .1px solid var(--LIGHTTEXT-COLOR);
+    /* border: .1px solid #33333356; */
+    /* box-shadow: 0 0 1px var(--LIGHTTEXT-COLOR); */
+}
+
+.deviceCard:hover {
+    box-shadow: 0 0 10px var(--LIGHTTEXT-COLOR);
+}
+
+.deviceCard__img {
+   padding: .3em .3em .4em .3em;
+}
+
+.deviceCard__img  img {
+    max-width: 200px;
+    max-height: 200px;
+ }
+
+.deviceCard__title {
+    color: var(--LIGHTDARK-COLOR);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4em;
+    padding: 0em .3em;
+    margin: .4em .1em;
+    text-align: center;
+}
+
+.deviceCard__subtitle {
+    color: var(--LIGHTDARK-COLOR);
+    font-size: .8rem;
+    font-weight: 600;
+    line-height: 1.4em;
+    padding: 0em .3em;
+    margin: .4em .1em;
+    text-align: center;
+}
+
+/* ||  MEDIA QUERIES */
+
+/* middle device eg, tabblets/bigger phones*/
+@media screen and (min-width: 390px) {
+    .deviceCard {
+        width: 270px;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: .5em;
+        border-radius: 2%;
+        background-color: var(--WHITE-COLOR);
+        box-shadow: 0 0 1px var(--LIGHTTEXT-COLOR); */
+    }
+
+    .deviceCard__img {
+        padding: .5em 1em;
+    }
+}

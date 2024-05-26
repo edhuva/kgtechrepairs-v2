@@ -1,0 +1,110 @@
+.bg__img {
+    background-color: var(--BGCOLOR);
+     background-image: url('../../img/harddrive2.jpeg');
+     background-size: cover;
+     background-position: top right;
+     background-blend-mode:lighten;
+}
+.recovery__title {
+    font-size: 1.9rem;
+    padding: 1em 0em  1em 5em;
+}
+
+.recovery__top {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.recovery__top h3 {
+    font-size: 1.5rem;
+    padding-bottom: .8em;
+}
+
+.recovery__top p {
+    line-height: 1.6em;
+}
+
+.recovery__top-p p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-top: .3em;
+}
+
+.recovery__mid {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1.5em 0em;
+}
+
+.recovery__side {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.recovery__side h3 {
+    font-size: 1.5em;
+    padding: 1em 0em;
+}
+
+.recovery__side p {
+    line-height: 1.6em;
+}
+
+.recovery__side {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.recovery__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3em;
+    margin: 1em auto;
+ }
+ 
+ .recovry-img {
+     width: 400px;
+     height: 400px;
+     background-color: var(--BGCOLOR);
+     background-image: url('../../img/harddrive1.jpeg');
+     background-size: cover;
+     background-position: top right;
+     background-blend-mode: normal;
+     border-radius: 50%;
+ }
+
+ .recovery__cards {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+ }
+
+@media screen and (max-width: 500px) {
+    .recovery__title {
+        font-size: 1.5rem;
+        padding: 1em 0em  1em 2em;
+    }
+
+    .recovery__top-p p {
+        font-size: 1rem;
+        font-weight: 600;
+        padding-top: .4em;
+    }
+
+    .recovry-img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* larger  */
+@media screen and (min-width: 800px) {
+    .recovery__top {
+        width: 60%;
+    }
+
+} 

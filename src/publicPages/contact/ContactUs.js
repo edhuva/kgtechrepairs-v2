@@ -174,7 +174,7 @@ const ContactUs = () => {
 
 
   return (
-    <div  className=' top-margin contact__container'>
+    <div  className=' top-margin contact__container bg__img'>
       <DashFormContainer title='' content={content} />
     </div>
   )

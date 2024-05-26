@@ -390,6 +390,16 @@ tr {
     text-decoration: underline;
 }
 
+.public__title {
+    padding: .3em;
+    margin-bottom: .8em;
+}
+
+.public__title h2{
+    font-size: 2.5rem;
+    line-height: 35px;
+}
+
 /* ||  MEDIA QUERIES */
 
 /* middle device eg, tabblets/bigger phones*/
@@ -421,6 +431,10 @@ tr {
 
     .form__column--divide {
         width: 100%;
+    }
+
+    .public__title h2{
+        font-size: 1.7rem;
     }
 }
 

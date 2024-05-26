@@ -31,7 +31,10 @@ const text = <>
   
   return (
     <div  className='top-margin sm__top--padding'>
-      <About aboutBtn={false}/>
+      <div className='bg__img'>
+        <About aboutBtn={false}/>
+      </div>
+      
       <div className='company-content content__padding'>
         <div className='company-feature bg__color--dark'>
           <Feature title="Vision." text=" 
@@ -42,7 +45,7 @@ const text = <>
         </div>
         
       </div>
-      <div className='company-content section__padding content__reverse'>
+      <div className='company-content section__padding content__reverse bg__img'>
         <div className='company-feature'>
           <Feature title="Values." text={Values}/>
         </div>

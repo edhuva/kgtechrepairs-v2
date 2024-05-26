@@ -313,8 +313,10 @@ const NewCustomerSignup = () => {
     )
 
     return (
-        <div className='public__form-section'>
-          <DashFormContainer title='Signup' content={content} />
+        <div className='bg__img'>
+            <div className='public__form-section'>
+                <DashFormContainer title='Signup' content={content} />
+            </div>
         </div>
     )
 }

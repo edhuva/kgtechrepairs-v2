@@ -5,10 +5,10 @@ import './About.css';
 
 // About
 const About = ({ aboutBtn}) => {
-  return (
+  const content = (
     <section className='home__about section__margin'>
         <div className='home__about-info'>
-          <div className='home__about-title'>
+          <div className='public__title'>
             <h2>Our Company.</h2>
           </div>
 
@@ -41,6 +41,7 @@ const About = ({ aboutBtn}) => {
         </div>
     </section>
   )
+  return content
 }
 
 export default About

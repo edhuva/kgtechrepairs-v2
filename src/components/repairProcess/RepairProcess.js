@@ -6,7 +6,7 @@ import RepairCard from '../repairCard/RepairCard';
 // Repair Process
 const RepairProcess = () => {
   return (
-    <section className='repairProcess section__padding'>
+    <section className='repairProcess section__padding bg__img'>
         <div className='repairProcess-heading'>
             <h2 >Your Device Repair Process</h2>
         </div>
