@@ -15,7 +15,7 @@ const TermsAndConds = () => {
           <div className='support__top'>
             <h3> OverView </h3>
             <p>
-              This Website is operated by KGTech Repairs®. Our offer on this website, include all information, tools and service available to you, the user, is Conditioned upon acceptance of all terms, conditions, policies and notices stated here.
+              This Website is operated by KGTech Repairs®. Our offer on this website, include all information, tools and services available to you, the user, is Conditioned upon acceptance of all terms, conditions, policies and notices stated here.
             </p>
             <p>By visiting our site and/ or Receiving any service from us, you engage in our "Service" and agree to be bound by the following terms and conditions. </p>
             <p>These  Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, and our staff/employees.</p>

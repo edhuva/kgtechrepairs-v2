@@ -50,7 +50,6 @@
 }
 
 .home__service-feature {
-    /* flex: 1; */
     display: flex;
     width: 100%; 
 }
@@ -119,7 +118,6 @@
 @media screen and (min-width: 800px) {
    
     .home__service-feature {
-        /* flex: 1; */
         display: flex;
         width: 500px; 
     }

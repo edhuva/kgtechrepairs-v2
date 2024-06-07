@@ -38,7 +38,7 @@ const text = <>
       <div className='company-content content__padding'>
         <div className='company-feature bg__color--dark'>
           <Feature title="Vision." text=" 
-          To be the most SA’s leading and trusted computer repair centre of choice for fast turnaround time walk-in and walk-out quality repairs and support services of any device along with exceptional customer focused experience."/>
+          To be the most SA’s leading and trusted computer repair centre of choice, for fast turnaround time walk-in and walk-out quality repairs and support services of any device, along with exceptional customer focused experience."/>
         </div>
         <div className='company-feature bg__color'>
           <Feature title="Mission." text={text} />

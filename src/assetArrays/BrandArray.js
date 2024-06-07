@@ -1,19 +1,20 @@
-import hp1 from '../img/hp1.png';
-import asus2 from '../img/asus2.png';
-import acer1 from '../img/acer1.png';
-import lenovo1 from '../img/lenovo1.jpg';
-import del2 from '../img/del2.png';
-import intel1 from '../img/intel1.png';
-import mac3 from '../img/mac3.png';
-import toshiba2 from '../img/toshiba2.png';
-import compaq1 from '../img/compaq1.png';
-import gigabyte from '../img/gigabyte1.png';
-import sony1 from '../img/sony1.png';
-import ibm1 from '../img/ibm1.png';
-import samsung1 from '../img/samsung1.png';
-import msi1 from '../img/msi1.png';
-import lg1 from '../img/lg1.png';
-import fujitsu2 from '../img/fujitsu2.jpg';
+const acer1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/acer1.png';
+const asus2 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/asus2.png';
+const compaq1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/compaq1.png';
+const del2 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/del2.png';
+const fujitsu2 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/fujitsu2.jpg';
+const gigabyte = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/gigabyte1.png';
+const hp1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/hp1.png';
+const ibm1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/ibm1.png';
+const intel1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/intel1.png';
+const lenovo1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/lenovo1.jpg';
+const lg1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/lg1.png';
+const mac3 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/mac3.png';
+const msi1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/msi1.png';
+const samsung1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/samsung1.png';
+const sony1 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/sony1.png';
+const toshiba2 = 'https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/toshiba2.png';
+
 
 const BrandArray = [
     hp1, asus2, acer1, lenovo1, del2, intel1, mac3, toshiba2, compaq1, gigabyte,

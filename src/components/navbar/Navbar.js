@@ -1,18 +1,17 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RiMenuFill, RiCloseLine } from 'react-icons/ri';
-import KG_logo  from '../../img/KG_logo.png';
 import './Navbar.css';
 
 // Menu
 const Menu = () => (
     <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="computerrepairs">Repairs</Link></li>
-        <li><Link to="parts">Parts</Link></li>
-        <li><Link to="datarecovery">Data Recovery</Link></li>
-        <li><Link to="about">Company</Link></li>
-        <li><Link to="contactus">Contact Us</Link></li>
+        <Link to="/"><li>Home</li></Link>
+        <Link to="computerrepairs"><li>Repairs</li></Link>
+        <Link to="parts"><li>Parts</li></Link>
+        <Link to="datarecovery"><li>Data Recovery</li></Link>
+        <Link to="about"><li>Company</li></Link>
+        <Link to="contactus"><li>Contact Us</li></Link>
     </ul>
 )
 
@@ -37,7 +36,7 @@ const Navbar = () => {
                 <div className='home__navbar-logo_link'>
                     <Link to="/" className='home__navbar-logo'>
                         <div className='home-logo'>
-                            <img src={KG_logo} alt='logo' />
+                            <img src='https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/KG_logo.png' alt='logo' />
                         </div>
                         <h1><span className='nowrap'>KGTech Repairs®</span></h1>
                     </Link>

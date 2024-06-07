@@ -19,9 +19,7 @@ const UserAccountDetails = ({ user, employees, customers }) => {
     let userEditLink = `/private/dash/users/account/${userId}`;
 
     if (employee) {
-        console.log('im employee')
         userId = employee?.id;
-        console.log('im employee')
         userDetails = employee;
         userEditLink = `/private/dash/employees/account/${userId}`
     }

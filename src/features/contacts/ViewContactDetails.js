@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import DashFormContainer from "../auth/dashboard/DashFormContainer";
-import ContactsList from './ContactsList';
 
 //View Contact
 const ViewContactDetails = ({ contact }) => {

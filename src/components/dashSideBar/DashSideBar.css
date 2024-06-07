@@ -9,7 +9,8 @@
 
 .dash__sideBar-container {
     flex: 1;
-    height: 710px;
+    /* height: 100%; */
+    height: 750px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;

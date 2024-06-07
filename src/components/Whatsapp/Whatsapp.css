@@ -1,0 +1,31 @@
+.whatsapp {
+    background-color: var(--WHATSAPP-BGCOLOR);
+    width: 50px;
+    height: 50px;
+    bottom: 120px;
+    right: 50px;
+    position: fixed;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    color: var(--WHITETEXT-COLOR);
+    display: grid;
+    place-content: center;
+    box-shadow: 0 0 3px var(--LIGHTTEXT-COLOR);
+}
+
+.whatsapp__btn {
+    background-color: transparent;
+    border: none;
+}
+
+.whatsapp svg {
+    cursor: pointer;
+    display: block;
+   color: var(--WHITETEXT-COLOR);
+    border-color: transparent;
+}
+
+.whatsapp svg:hover {
+    transform: scale(1.2);
+}

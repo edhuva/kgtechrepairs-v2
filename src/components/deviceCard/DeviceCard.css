@@ -8,8 +8,6 @@
     border-radius: 2%;
     background-color: var(--WHITE-COLOR);
     border: .1px solid var(--LIGHTTEXT-COLOR);
-    /* border: .1px solid #33333356; */
-    /* box-shadow: 0 0 1px var(--LIGHTTEXT-COLOR); */
 }
 
 .deviceCard:hover {
@@ -51,14 +49,6 @@
 @media screen and (min-width: 390px) {
     .deviceCard {
         width: 270px;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: .5em;
-        border-radius: 2%;
-        background-color: var(--WHITE-COLOR);
-        box-shadow: 0 0 1px var(--LIGHTTEXT-COLOR); */
     }
 
     .deviceCard__img {

@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
 }
 
-/* || VARIABLES */
+/* || VARIABLES */ 
 :root {
     /* FONT */
     --FONTF: "Manrope", sans-serif;
@@ -43,7 +43,11 @@
     --TABLE-BGCOLOR: #d2dddb;
     --LOGIN-BGCOLOR: #000;
     --FOOTER-COLOR: #031B34;
+    --WHATSAPP-BGCOLOR: rgb(65, 161, 65);
     --SAVE-BTN-COLOR: rgba(0, 0, 255, 0.678);
+    --ANIM-LIGHTBG-COLOR: rgb(197, 197, 223);
+    --ANIM-CONNECTORBG-COLOR: rgba(0, 168, 253);
+    --ANIM-ROTATORBG-COLOR: #ccc;
 
     --GRADIENT-TEXT: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
     --GRADIENT-BAR: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);

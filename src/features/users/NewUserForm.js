@@ -239,7 +239,6 @@ const NewUserForm = () => {
    
   );
 
-
   return (
     <>
       <DashFormContainer title="Add New User" content={content} />

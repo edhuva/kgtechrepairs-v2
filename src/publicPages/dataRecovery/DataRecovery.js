@@ -33,10 +33,10 @@ const DataRecovery = () => {
           </div>
 
           <div className='recovery__cards'>
-            <DataCard title='No Recovery, No Charge' text='No recovery - no charge:  if the data you require is not to your satisfaction the recovery amounts above do not apply.' />
+            <DataCard title='No Recovery, No Charge' text='No recovery - no charge:  if the data you require is not to your satisfaction the recovery charge amounts do not apply.' />
             <DataCard title='Free assessment and Quote' text='Free assessment and quote: There is no quote rejection fee, drive assessment is a free service.' />
             <DataCard title='Monthly Success Rate' text='Success Rate is the percentage of successful data recovery cases completed in a single month.' />
-            <DataCard title='Privacy Gauranteed' text='Guaranteed privacy: Full data confidentiality, all work is carried out by Data Recovery and its employees' />
+            <DataCard title='Privacy Gauranteed' text='Guaranteed privacy: Full data confidentiality, all work is carried out by Data Recovery Department and its employees' />
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-### KGTech Repair Version 2
+### KGTech Repair Version 2 (FullStack Application)
 KGTech repair app version 2 - is an application which provides business management repair orders system for KGTech company with an addition of more features than version 1. 
 
 ### features include: 
@@ -14,7 +14,24 @@ KGTech repair app version 2 - is an application which provides business manageme
 9. user roles restriction management
 10. customers and employees statistic analysis
 11. notification functionality
-11. etc
+12. subscriptions and contact management
+13. etc
+
+### Resources & Tools include: 
+1. AWS S3 bucket - Storing images
+2. MongoDB Atlas - Database
+3. JSON Web Tokens - Security service (access tokens and refresh tokens)
+4. Git and GitHub - Code version control, Store and Sharing code
+5. Render - App Deployement and Hosting
+6. Reactjs - Frontend Framework
+7. Expressjs - Backend Framework
+8. Nodejs - Javascript Runtime Environment
+9. Javascript, JSX, HTML, CSS - Languages
+10. Chrome, FireFox - Browsers
+11. Redux - State Management
+12. RKT Query - Data fetching and Catching
+13. etc
+
 
 ### CheckList: 
 1. [x] Replacing kGTech version 1 which was only focusing on replacing sticky note system
@@ -22,7 +39,7 @@ KGTech repair app version 2 - is an application which provides business manageme
 3. [x] Desktop mode is most important but should be available in mobile
 4. [x] Add customer registration to the application
 5. [x] Add employee registration portal to the application 
-6. [x] Add an customer and employee login to the application
+6. [x] Add customer and employee login to the application
 7. [x] Provide a welcome dashboard after login 
 8. [x] Provide short statistic analysis on dashboard
 9. [x] Provide sideBar
@@ -63,9 +80,10 @@ KGTech repair app version 2 - is an application which provides business manageme
 38. [x] Only Managers or Admins can create, edit, delete or view employees and general users
 39. [x] Only Managers or Admins can view employees and customers staitstics analysis
 40. [x] Only Managers or Admins have access to users and employees settings
+41. [x] Only Managers or Admins have access to customers and employees analysis
 ### Public pages: 
-41. [x] Provide Desktop , Laptop  Repairs pages
-42. [x] Provide Data Recovery, Support, Parts Pages
-43. [x] Provide About Us, Contact Us, Terms & Conditions pages
-44. [x] Provide Returns Policy, Privacy Policy pages
-45. [x] Provide Social Media (facebook, twitter X, instagram, linkedin) platforms Links
+42. [x] Provide Computer  Repairs pages
+43. [x] Provide Data Recovery, Support, Parts Pages
+44. [x] Provide About Us, Contact Us pages
+45. [x] Provide Terms & Conditions, Privacy Policy pages
+46. [x] Provide Social Media (facebook, twitter X, instagram, linkedin) platforms Links

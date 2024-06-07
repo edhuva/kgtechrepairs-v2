@@ -7,7 +7,6 @@ import { useAddNewSubscriptionMutation } from '../../features/auth/authApiSlice'
 import { toast } from 'react-toastify';
 import Notify from '../../components/notify/Notify';
 import { PulseLoader } from 'react-spinners';
-import KG_logo from '../../img/KG_logo.png';
 import './Footer.css';
 
 const ERROR_MESSAGE = 'Invalid data';
@@ -92,7 +91,7 @@ const Footer = () => {
      contentloading = isLoading && <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />;
 
   const content = (
-    <>
+    <> 
         {contentloading}
         <Notify />
 
@@ -107,7 +106,6 @@ const Footer = () => {
 
                 <form className='footer__news-input' onSubmit={(e) => e.preventDefault()}>
                     <label htmlFor='email'>
-                        {/* <input type='email' id='email' name='email' placeholder='EMAIL'/> */}
                         <input className={`form__input`} id='email' name='email' type='text' autoComplete='off' placeholder='Email' value={email} onChange={onEmailChanged} />
                     </label>
                     <button type='button' onClick={handleSubmit} >SUBSCRIBE</button>
@@ -120,7 +118,7 @@ const Footer = () => {
                     <div className='footer__company-logo'>
                         <Link to="/" className='footer-logo-link'>
                             <div className='footer-logo'>
-                                <img src={KG_logo} alt='logo' />
+                                <img src='https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/KG_logo.png' alt='logo' />
                             </div>
                             <h1><span className='nowrap'>KGTech Repairs®</span></h1>
                         </Link>

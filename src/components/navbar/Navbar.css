@@ -77,12 +77,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5em
 }
 
-.home__navbar-links li {
-    padding: .5em;
-    
+.home__navbar-links li,
+.home__navbar-menu_links li {
+    padding: .5em 1em;
+}
+
+.home__navbar-links li:hover,
+.home__navbar-menu_links li:hover {
+    background-color: var(--BGCOLOR-DARK);   
+    box-shadow: 0 1px 0px var(--LIGHTTEXT-COLOR); 
 }
 
 .home__navbar-links a,
@@ -103,13 +108,15 @@
 }
 
 .home__navbar-logo_link a:hover,
-.home__navbar-links a:hover,
-.home__navbar-menu_links a:hover,
 .home__navbar-links a:focus-visible,
 .home__navbar-menu_links a:focus-visible {
     color: var(--LINK-HOVER);
 }
 
+.home__navbar-menu_links a:hover,
+.home__navbar-links a:hover {
+    color: var(--LIGHTTEXT-COLOR);   
+}
 .home__navbar-sign {
     display: flex;
     justify-content: center;
@@ -125,7 +132,6 @@
     line-height: 25px;
     border: none;
     color: var(--WHITETEXT-COLOR);
-    /* background: var(--GRADIENT-TEXT); */
     background-color: transparent;
 }
 .home__navbar-sign a,
@@ -142,33 +148,12 @@
     cursor: pointer;
 }
 
-/* .home__navbar-sign a:any-link,
-.home__navbar-menu_sign button a:any-link {
-    background: var(--GRADIENT-TEXT); 
-    color: var(--WHITETEXT-COLOR);
-    font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 25px;
-} */
-
-/* .home__navbar-sign button a:any-link,
-.home__navbar-menu_sign button a:any-link {
-    display: block;
-    background-color: black;
-}  */
-
 .home__navbar-sign a:last-child,
 .home__navbar-menu_sign a:last-child {
     background: #FF4820; 
 }
 
-/* .home__navbar-sign a button:last-child,
-.home__navbar-menu_sign a button:last-child {
-    background-color: transparent;
-} */
-
 .home__navbar-menu {
-    /* display: flex; */
     padding-left: .5em;
     position: relative;
 }
@@ -184,7 +169,6 @@
     flex-direction: column;
     background-color: var(--NAVHEADER-BGCOLOR);
     text-align: end;
-    /* padding: 1.5em; */
     position: absolute;
     top: 40px;
     right: 0;
@@ -200,7 +184,6 @@
 }
 
 .home__navbar-menu_links ul {
-    /* background-color: green; */
     flex: 1;
     list-style-type: none;
     display: flex;
@@ -210,6 +193,7 @@
     margin: .3em;
    
 }
+
 .home__navbar-menu_links li {
     flex: 1;
     border-bottom: .1px solid var(--BORDER-BGCOLOR);

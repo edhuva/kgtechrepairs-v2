@@ -1,0 +1,183 @@
+.animation {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+.animation__container {
+    width: 20em;
+    height: 20em;
+    position: relative;
+}
+
+.light {
+    position: absolute;
+    width: 6em;
+    height: 6em;
+    top: 6.5em;
+    left: 8.5em;
+    background-color: var(--ANIM-LIGHTBG-COLOR);
+    border-radius: 50%;
+    box-shadow: 0 0 3em var(--WHITE-COLOR);
+}
+
+.light__trophy {
+    font-size: 1.5em;
+    color: var(--BGCOLOR);
+    position: absolute;
+    top: 1.5em;
+    left: 7em;
+}
+
+.light__laptop {
+    font-size: 1.5em;
+    color: var(--BGCOLOR);
+    position: absolute;
+    top: 5.5em;
+    left: 2.9em;
+}
+
+.light__desktop {
+    font-size: 1.5em;
+     color: var(--BGCOLOR);
+    position: absolute;
+    top: 5.5em;
+    left: 11.3em;
+}
+
+.light__screwdriver {
+    font-size: 1.5em;
+    color: var(--BGCOLOR);
+    position: absolute;
+    top: 9.8em;
+    left: 7em;
+}
+
+.connector, .rotator {
+    position: absolute;
+    border-style: solid;
+    border-color: var(--WHITE-COLOR) transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+
+.connector {
+    top: 3.5em;
+    left: 5.5em;
+    width: 12em;
+    height: 12em;
+    animation: orbit 36.5s linear infinite;
+}
+
+.rotator {
+    top: 0em;
+    right: -.8em;
+    width: 4em;
+    height: 4em;
+    animation: orbit 2.7s linear infinite;
+}
+
+.connector::before,
+.rotator::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.connector::before {
+    top: 1.1em;
+    right: 0.6em;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: var(--ANIM-CONNECTORBG-COLOR);
+}
+
+.rotator::before {
+    top: 0em; 
+    right: 0.2em;
+    width: .9em;
+    height: .9em;
+    background-color: var(--ANIM-ROTATORBG-COLOR);
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* middle device eg, tabblets/bigger phones*/
+@media screen and (min-width: 1240px) {
+    .animation__container {
+        width: 30em;
+        height: 30em;
+        position: relative;
+    }
+    
+    .light {
+        position: absolute;
+        width: 8em;
+        height: 8em;
+        top: 10.5em;
+        left: 10.5em;
+        box-shadow: 0 0 4em var(--WHITE-COLOR);
+    }
+
+    .light__trophy {
+        font-size: 2em;
+        position: absolute;
+        top: 2.1em;
+        left: 6.5em;
+    }
+
+    .light__laptop {
+        font-size: 2em;
+        position: absolute;
+        top: 6.5em;
+        left: 1.8em;
+    }
+
+    .light__desktop {
+        font-size: 2em;
+        position: absolute;
+        top: 6.5em;
+        left: 11.8em;
+    }
+
+    .light__screwdriver {
+        font-size: 2em;
+        position: absolute;
+        top: 11.8em;
+        left: 6.5em;
+    }
+    
+    .connector {
+        top: 5em;
+        left: 5em;
+        width: 20em;
+        height: 20em;
+    }
+    
+    .rotator {
+        top: 0.1em;
+        right: -0.6em;
+        width: 6em;
+        height: 6em;
+    }
+    
+    .connector::before {
+        top: 2.3em;
+        right: 1.4em;
+        width: 2em;
+        height: 2em;
+    }
+    
+    .rotator::before {
+        top: 0.2em; 
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+    }
+}

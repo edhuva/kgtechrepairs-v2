@@ -4,19 +4,18 @@ import { RiMenuFill, RiCloseLine } from 'react-icons/ri';
 import { useSendLogoutMutation } from '../../features/auth/authApiSlice';
 import DashUserStatus from '../dashUserStatus/DashUserStatus';
 import PulseLoader from "react-spinners/PulseLoader";
-import KG_logo from '../../img/KG_logo.png';
 import './DashNavbar.css';
 
 // Menu
 const Menu = () => (
     <ul>
-        <li><Link to="dash">Dashboard</Link></li>
-        <li><Link to="datarecovery">Data Recovery</Link></li>
-        <li><Link to="parts">Parts</Link></li>
-        <li><Link to="support">Support</Link></li>
-        <li><Link to="about">Company</Link></li>
-        <li><Link to="contactus">Contact Us</Link></li>
-    </ul>
+    <Link to="/"><li>Home</li></Link>
+    <Link to="computerrepairs"><li>Repairs</li></Link>
+    <Link to="parts"><li>Parts</li></Link>
+    <Link to="datarecovery"><li>Data Recovery</li></Link>
+    <Link to="about"><li>Company</li></Link>
+    <Link to="contactus"><li>Contact Us</li></Link>
+</ul>
 )
 
 // Dash Navbar
@@ -75,7 +74,7 @@ const DashNavbar = () => {
                         <div className='home__navbar-logo_link'>
                             <Link to="/private/dash" className='home__navbar-logo'>
                                 <div className='home-logo'>
-                                    <img src={KG_logo} alt='logo' />
+                                    <img src='https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/KG_logo.png' alt='logo' />
                                 </div>
                                 <h1><span className='nowrap'>KGTech Repairs®</span></h1>
                             </Link>

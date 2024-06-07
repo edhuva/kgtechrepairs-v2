@@ -41,9 +41,6 @@ const DashBoardContainer = () => {
         }),
     })
 
-    console.log('repair orders')
-    console.log(repairOrders?.length)
-
     //repairRequests
     const { repairRequests } = useGetRepairRequestsQuery("RepairRequestsList", {
         selectFromResult: ({ data }) => ({

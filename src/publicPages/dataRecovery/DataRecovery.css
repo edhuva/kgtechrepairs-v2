@@ -1,6 +1,6 @@
 .bg__img {
     background-color: var(--BGCOLOR);
-     background-image: url('../../img/harddrive2.jpeg');
+     background-image: url('https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/harddrive2.jpeg');
      background-size: cover;
      background-position: top right;
      background-blend-mode:lighten;
@@ -70,11 +70,12 @@
      width: 400px;
      height: 400px;
      background-color: var(--BGCOLOR);
-     background-image: url('../../img/harddrive1.jpeg');
+     background-image: url('https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/harddrive1.jpeg');
      background-size: cover;
      background-position: top right;
      background-blend-mode: normal;
      border-radius: 50%;
+     box-shadow: 0 0 1px var(--LIGHTTEXT-COLOR);
  }
 
  .recovery__cards {
@@ -106,5 +107,4 @@
     .recovery__top {
         width: 60%;
     }
-
 } 

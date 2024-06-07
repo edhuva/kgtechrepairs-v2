@@ -27,7 +27,7 @@ const ViewRepairOrder = () => {
   })
 
   //if not true keep loading
-  if (!repairOrder ||  !invoices?.length ) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />;
+  if (!repairOrder ||  !invoices ) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />;
 
     const content = <ViewRepairOrderDetails repairOrder={repairOrder} invoices={invoices}/>
   return content;

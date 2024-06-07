@@ -17,7 +17,7 @@
     width: 400px;
     height: 400px;
     background-color: var(--BGCOLOR);
-    background-image: url('../../img/comp5.jpg');
+    background-image: url('https://kgtechawsbucket.s3.eu-north-1.amazonaws.com/comp5.jpg');
     background-size: cover;
     background-position: top right;
     background-blend-mode: normal;
@@ -54,19 +54,25 @@
     margin-bottom: 1em;
 }
 
-.home__about-text ul {
-    list-style-type: disc;
-    margin-bottom: .3em;
+.about__top-p ul li{
+    font-size: 1rem;
+    font-weight: 600;
+    padding-top: .3em;
+    margin-left: 1em;
 }
 
-.home__about-text li {
-  list-style-position: inside;
+.about__top-p ul li {
+    padding: .5em;
 }
 
 .home-about-button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.home-about-button button{
+    box-shadow: 0 5px 5px var(--NAVHEADER-BGCOLORR); 
 }
 
 .home-about-button button {
@@ -107,9 +113,22 @@
         font-size: 1.7rem;
     }
 
-    .home__about-text p, li {
+    .home__about-text p {
         font-size: .75rem;
-        line-height: 20px;
+        line-height: 1.8em;
+    }
+
+    .about__top-p ul li{
+        font-size: .9rem;
+        margin-left: .1em;
+    }
+    
+    .about__top-p ul li {
+        padding: .5em;
+    }
+
+    .home-about-button button {
+        font-size: 1rem;
     }
 }
 
@@ -124,6 +143,10 @@
     .home__about-img img {
         width: 500px;
         height: 400px;
+    }
+
+    .home__about-text p {
+        line-height: 1.8em;
     }
 } 
 

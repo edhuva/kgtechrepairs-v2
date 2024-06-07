@@ -99,6 +99,10 @@
         padding-top: .5rem;
     }
 
+    .company-content .app__feature-text p {
+        line-height: 1.9em;
+    }
+
     .bg__color {
         background-color: var(--BGCOLOR);
         padding-right: 2em;
