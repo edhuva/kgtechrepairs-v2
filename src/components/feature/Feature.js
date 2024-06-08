@@ -9,7 +9,7 @@ const Feature = ({ title, text }) => {
         <h2>{title}</h2>
       </div>
       <div className='app__feature-text'>
-        <p>{text}</p>
+        <div>{text}</div>
       </div>
     </div>
   )

@@ -12,7 +12,7 @@ import useTitle from '../../hooks/useTitle';
 //input regex
 const USERNAME_REGEX = /^[A-z][A-z0-9-_]{3,24}$/;
 const FULLNAME_REGEX = /^[A-z ]{3,20}$/
-const EMAIL_REGEX = /^[A-z0-9.@]{12,30}$/
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const PHONENO_REGEX = /^[0-9+]{10,15}$/
 

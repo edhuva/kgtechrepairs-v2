@@ -8,6 +8,10 @@ import DashFormContainer from '../auth/dashboard/DashFormContainer';
 import { toast } from 'react-toastify';
 import Notify from '../../components/notify/Notify';
 
+const ERROR_MESSAGE = 'Invalid data';
+//input regex
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 // Edit subscription Form
 const EditSubscriptionForm = ({ subscription }) => {
 
@@ -31,11 +35,21 @@ const EditSubscriptionForm = ({ subscription }) => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState(subscription.email);
+  const [validEmail, setValidEmail] = useState(false);
+  const [errMsg, setErrMsg ] = useState('');
   const [status, setStatus] = useState(subscription.status);
 
   useEffect(() => {
     emailRef.current.focus();
   }, [])
+
+  useEffect(() => {
+    setValidEmail(EMAIL_REGEX.test(email));
+  }, [email])
+
+  useEffect(() => {
+    setErrMsg('')
+  }, [email])
 
   //useEffect if successfull
   useEffect(() => {
@@ -105,6 +119,21 @@ const EditSubscriptionForm = ({ subscription }) => {
     
     }, [isError, isDelError, delerror, error])
 
+    useEffect(() => {
+      if (errMsg) {
+        toast.error(errMsg, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        }) 
+      }
+      return () => toast()
+  }, [errMsg])
 
     const created = new Date(subscription.createdAt).toLocaleString('en-SA', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'});
     const updated = new Date(subscription.updatedAt).toLocaleString('en-SA', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'});
@@ -112,10 +141,14 @@ const EditSubscriptionForm = ({ subscription }) => {
     const onEmailChanged = (e) => setEmail(e.target.value);
     const onStatusChanged = e => setStatus(prev => !prev);
 
-    const canSave = [email].every(Boolean) && !isLoading;
+    const canSave = [validEmail].every(Boolean) && !isLoading;
 
     // Save Contact
     const onSaveSubscriptionClicked = async () => {
+        if (!email || !validEmail) {
+          setErrMsg(ERROR_MESSAGE);
+          return;
+        }
         if (canSave) {
             await updateSubscription({id: subscription.id, email, status})
         }
@@ -167,7 +200,7 @@ const EditSubscriptionForm = ({ subscription }) => {
                       <FontAwesomeIcon icon={faArrowCircleLeft} />
                   </button>
                   <button className='icon-button action-icon-button save__btn' title='Save' 
-                  disabled={!canSave}
+                  
                   onClick={onSaveSubscriptionClicked}>
                     <FontAwesomeIcon icon={faSave} />
                   </button>

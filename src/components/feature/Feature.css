@@ -36,7 +36,7 @@
     display: flex;
 }
 
-.app__feature-text p {
+.app__feature-text div {
     font-weight: 500;
     color: var(--LIGHTTEXT-COLOR);
     line-height: 24px;
@@ -53,7 +53,7 @@
         font-size: 14px;
         line-height: 22px;
     }
-    .app__feature-text p {
+    .app__feature-text div {
         font-size: .75rem;
         line-height: 20px;
     }

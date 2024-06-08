@@ -14,9 +14,11 @@ import Notify from '../../components/notify/Notify';
 //input regex
 const USERNAME_REGEX = /^[A-z][A-z0-9-_]{3,24}$/;
 const FULLNAME_REGEX = /^[A-z ]{3,20}$/
-const EMAIL_REGEX = /^[A-z0-9.@]{12,30}$/
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const PHONENO_REGEX = /^[0-9+]{10,15}$/
+
+
 
 // Edit Employee Form
 const EditEmployeeForm = ({ employee, user }) => {
@@ -227,10 +229,8 @@ const EditEmployeeForm = ({ employee, user }) => {
     let canSave;
     if (password) {
         canSave = [roles.length, experties.length, validUsername, validFullname, validPhoneNo, validEmail, validPassword].every(Boolean) && !isLoading;
-        console.log('Password is true')
     } else {
         canSave = [roles.length, experties.length, validUsername, validFullname, validPhoneNo, validEmail].every(Boolean) && !isLoading;
-        console.log('Password is not true')
     }
 
     const errClass = (isError || isDelError) ? "errmsg" : "offscreen";
@@ -364,9 +364,24 @@ const EditEmployeeForm = ({ employee, user }) => {
                     <div className='row'>
                       <label className='label' htmlFor='experties'>
                       EXPERTIES: </label>
-                      <select id='experties' name='experties' className={`form__select ${validExpertiesClass}`} value={experties} multiple={true} size={2} onChange={onExpertiesChanged}>
+                      <select id='experties' name='experties' className={`form__select ${validExpertiesClass}`} value={experties}  onChange={onExpertiesChanged}>
                       {expertiesOptions}
-                    </select>
+                      </select>
+                    </div> 
+                    <div className='row'>
+                      <label className='label' htmlFor='roles'>
+                        ASSIGNED ROLES: </label>
+                      <select id='roles' name='roles' className={`form__select ${validRolesClass}`} value={roles}  onChange={onRolesChanged}>
+                        {rolesOptions}
+                      </select>
+                    </div>
+
+                    {/* <div className='row'>
+                      <label className='label' htmlFor='experties'>
+                      EXPERTIES: </label>
+                      <select id='experties' name='experties' className={`form__select ${validExpertiesClass}`} value={experties} multiple={true} size={2}  onChange={onExpertiesChanged}>
+                      {expertiesOptions}
+                      </select>
                     </div> 
                     <div className='row'>
                       <label className='label' htmlFor='roles'>
@@ -374,7 +389,7 @@ const EditEmployeeForm = ({ employee, user }) => {
                       <select id='roles' name='roles' className={`form__select ${validRolesClass}`} multiple={true} size={2} value={roles}  onChange={onRolesChanged}>
                         {rolesOptions}
                       </select>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

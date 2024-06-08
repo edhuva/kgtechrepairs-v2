@@ -14,7 +14,7 @@ import useTitle from '../../hooks/useTitle';
 //input regex
 const USERNAME_REGEX = /^[A-z][A-z0-9-_]{3,24}$/;
 const FULLNAME_REGEX = /^[A-z ]{3,20}$/
-const EMAIL_REGEX = /^[A-z0-9.@]{12,30}$/
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const PHONENO_REGEX = /^[0-9+]{10,15}$/
 
@@ -189,13 +189,19 @@ const NewEmployeeForm = () => {
   const validRolesClass = !Boolean(roles.length) ? 'form__input--incomplete' : '';
   const validExpertiesClass = !Boolean(experties.length) ? 'form__input--incomplete' : '';
 
+  // const expertiesOptns =  <select id='experties' name='experties' className={`form__select ${validExpertiesClass}`} multiple={true} size={2}  value={experties} onChange={onExpertiesChanged}>
+  //   {expertiesOptions}
+  // </select>
   const expertiesOptns =  <select id='experties' name='experties' className={`form__select ${validExpertiesClass}`}  value={experties} onChange={onExpertiesChanged}>
-    {expertiesOptions}
-  </select>
+  {expertiesOptions}
+</select>
 
-  const rolesOptns = <select id='roles' name='roles' className={`form__select ${validRolesClass}`} value={roles} onChange={onRolesChanged}>
-    {rolesOptions}
-  </select>
+  // const rolesOptns = <select id='roles' name='roles' className={`form__select ${validRolesClass}`} multiple={true} size={2} value={roles} onChange={onRolesChanged}>
+  //   {rolesOptions}
+  // </select>
+  const rolesOptns = <select id='roles' name='roles' className={`form__select ${validRolesClass}`}  value={roles} onChange={onRolesChanged}>
+  {rolesOptions}
+</select>
   
   let contentLoading;
   contentLoading = isLoading && <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />;

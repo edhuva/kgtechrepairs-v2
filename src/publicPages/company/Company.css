@@ -21,7 +21,7 @@
     color: var(--TEXT-COLOR);
 }
 
-.company-content .app__feature-text p {
+.company-content .app__feature-text div {
     color: var(--TEXT-COLOR);
 }
 
@@ -56,7 +56,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.bg__color .app__feature-text p {
+.bg__color .app__feature-text div {
     color: var(--LIGHTTEXT-COLOR);
 }
 
@@ -99,7 +99,7 @@
         padding-top: .5rem;
     }
 
-    .company-content .app__feature-text p {
+    .company-content .app__feature-text div {
         line-height: 1.9em;
     }
 

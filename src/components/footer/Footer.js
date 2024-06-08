@@ -10,6 +10,8 @@ import { PulseLoader } from 'react-spinners';
 import './Footer.css';
 
 const ERROR_MESSAGE = 'Invalid data';
+//input regex
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 // Footer
 const Footer = () => {
@@ -23,9 +25,14 @@ const Footer = () => {
       }] = useAddNewSubscriptionMutation();
 
       const [email, setEmail] = useState('');
+      const [validEmail, setValidEmail] = useState(false);
       const [errMsg, setErrMsg ] = useState('');
 
       const created = new Date().toLocaleString('en-SA', { year: 'numeric' });
+
+      useEffect(() => {
+        setValidEmail(EMAIL_REGEX.test(email));
+      }, [email])
 
     useEffect(() => {
         setErrMsg('')
@@ -72,10 +79,10 @@ const Footer = () => {
         }
     }, [isError, error])
 
-    const canSave = [email].every(Boolean) && !isLoading;
+    const canSave = [validEmail].every(Boolean) && !isLoading;
 
     const handleSubmit = async () => {
-        if (!email) {
+        if (!email || !validEmail) {
           setErrMsg(ERROR_MESSAGE);
           return;
         }

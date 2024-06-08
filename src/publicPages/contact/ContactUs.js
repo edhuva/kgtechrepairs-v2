@@ -11,6 +11,8 @@ import { PulseLoader } from 'react-spinners';
 import './ContactUs.css';
 
 const ERROR_MESSAGE = 'Invalid data';
+//input regex
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const ContactUs = () => {
 
@@ -27,8 +29,13 @@ const ContactUs = () => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
+  const [validEmail, setValidEmail] = useState(false);
   const [message, setMessage] = useState('');
   const [errMsg, setErrMsg ] = useState('');
+
+  useEffect(() => {
+    setValidEmail(EMAIL_REGEX.test(email));
+  }, [email])
 
   useEffect(() => {
     setErrMsg('')
@@ -76,10 +83,10 @@ const ContactUs = () => {
     }
   }, [isError, error])
 
-   const canSave = [email, message].every(Boolean) && !isLoading;
+   const canSave = [validEmail, message].every(Boolean) && !isLoading;
 
   const handleSubmit = async () => {
-    if (!email || !message) {
+    if (!email || !validEmail || !message) {
       setErrMsg(ERROR_MESSAGE);
       return;
     }

@@ -8,6 +8,10 @@ import DashFormContainer from '../auth/dashboard/DashFormContainer';
 import { toast } from 'react-toastify';
 import Notify from '../../components/notify/Notify';
 
+const ERROR_MESSAGE = 'Invalid data';
+//input regex
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 // Edit contact Form
 const EditContactForm = ({ contact }) => {
 
@@ -31,12 +35,22 @@ const EditContactForm = ({ contact }) => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState(contact.email);
+  const [validEmail, setValidEmail] = useState(false);
   const [message, setMessage] = useState(contact.message)
+  const [errMsg, setErrMsg ] = useState('');
   const [status, setStatus] = useState(contact.status);
 
   useEffect(() => {
     emailRef.current.focus();
   }, [])
+
+  useEffect(() => {
+    setValidEmail(EMAIL_REGEX.test(email));
+  }, [email])
+
+  useEffect(() => {
+    setErrMsg('')
+  }, [email, message])
 
    //useEffect if successfull
    useEffect(() => {
@@ -109,6 +123,22 @@ const EditContactForm = ({ contact }) => {
   
     }, [isError, isDelError, delerror, error])
 
+    useEffect(() => {
+      if (errMsg) {
+        toast.error(errMsg, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        }) 
+      }
+      return () => toast()
+  }, [errMsg])
+
     const created = new Date(contact.createdAt).toLocaleString('en-SA', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'});
     const updated = new Date(contact.updatedAt).toLocaleString('en-SA', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'});
 
@@ -116,10 +146,15 @@ const EditContactForm = ({ contact }) => {
     const onMessageChanged = (e) => setMessage(e.target.value);
     const onStatusChanged = e => setStatus(prev => !prev);
 
-    const canSave = [email, message].every(Boolean) && !isLoading;
+    const canSave = [validEmail, message].every(Boolean) && !isLoading;
 
       // Save Contact
   const onSaveContactClicked = async () => {
+    if (!email || !validEmail || !message) {
+      setErrMsg(ERROR_MESSAGE);
+      return;
+    }
+
     if (canSave) {
       await updateContact({id: contact.id, email, message, status})
     }
@@ -172,7 +207,7 @@ const EditContactForm = ({ contact }) => {
                   <FontAwesomeIcon icon={faArrowCircleLeft} />
               </button>
               <button className='icon-button action-icon-button save__btn' title='Save' 
-              disabled={!canSave}
+              
               onClick={onSaveContactClicked}>
                 <FontAwesomeIcon icon={faSave} />
               </button>
