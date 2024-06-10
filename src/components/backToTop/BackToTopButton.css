@@ -17,3 +17,17 @@
 .backToTopButton svg {
     cursor: pointer;
 }
+
+.backToTopButton svg:hover {
+    transform: scale(1.2);
+}
+
+/* middle device eg, tabblets/bigger phones*/
+@media screen and (max-width: 500px) {
+    .backToTopButton {
+        width: 30px;
+        height: 30px;
+        font-size: 1.6rem;
+    }
+    
+}

@@ -29,3 +29,24 @@
 .whatsapp svg:hover {
     transform: scale(1.2);
 }
+
+/* middle device eg, tabblets/bigger phones*/
+@media screen and (max-width: 500px) {
+    .whatsapp {
+        background-color: var(--WHATSAPP-BGCOLOR);
+        width: 30px;
+        height: 30px;
+        bottom: 110px;
+        right: 50px;
+        position: fixed;
+        font-size: 2rem;
+        border: none;
+        border-radius: 50%;
+        color: var(--WHITETEXT-COLOR);
+        display: grid;
+        place-content: center;
+        box-shadow: 0 0 3px var(--LIGHTTEXT-COLOR);
+    }
+
+    
+}
