@@ -93,7 +93,7 @@ const ViewContactDetails = ({ contact }) => {
 
     return(
         <>
-          <DashFormContainer title="View Invoice" content={content} />
+          <DashFormContainer title="View Contact" content={content} />
         </>
     ) 
 }

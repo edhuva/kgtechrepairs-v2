@@ -56,7 +56,7 @@ const DashBoardContainer = () => {
     })
 
     //if not true keep loading
-    if (!users?.length || !employees?.length || !customers?.length || !repairOrders?.length || !repairRequests?.length || !invoices) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />
+    if (!users || !employees || !customers || !repairOrders || !repairRequests || !invoices) return <PulseLoader color="#81AFDD" style={{margin: '0em 0em 0em 5em'}} />
 
     //get current user
     const user = users.find(user => user.id === userid);

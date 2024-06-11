@@ -191,9 +191,9 @@ const EditCustomerForm = ({ customer, user }) => {
 
     let canSave;
     if (password) {
-        canSave = [ validUsername, validFullname, validPhoneNo, validEmail, validPassword].every(Boolean) && !isLoading;
+        canSave = [validUsername, validFullname, validPhoneNo, validEmail, validPassword].every(Boolean) && !isLoading;
     } else {
-        canSave = [ validUsername, validFullname, validPhoneNo, validEmail].every(Boolean) && !isLoading;
+        canSave = [validUsername, validFullname, validPhoneNo, validEmail].every(Boolean) && !isLoading;
     }
 
     const errClass = (isError || isDelError) ? "errmsg" : "offscreen";

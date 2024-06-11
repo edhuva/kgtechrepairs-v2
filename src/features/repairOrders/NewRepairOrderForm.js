@@ -107,7 +107,7 @@ const NewRepairOrderForm = ({ users, customers, employees }) => {
     // Save RepairOrder
     const onSaveRepairOrderClicked = async () => {
       if (canSave) {
-        await addNewRepairOrder({ customer: customerId, employeeCreated: empCreated.id, employeeAssigned: employeeAssignedId, deviceType, serialNo, brand, issueDesc })
+        await addNewRepairOrder({ customer: customerId, employeeCreated: empCreated.user, employeeAssigned: employeeAssignedId, deviceType, serialNo, brand, issueDesc })
       }
     }
 

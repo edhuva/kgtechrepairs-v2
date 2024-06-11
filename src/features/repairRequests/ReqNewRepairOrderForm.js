@@ -93,17 +93,17 @@ const ReqNewRepairOrderForm = ({ repairRequest, customers, employees }) => {
 
     if (empCreated) {
 
-        const empCreatedId = empCreated.id;
+        const empCreatedUsername = empCreated.user;
 
         const onIssueDescChanged = e => setIssueDesc(e.target.value);
         const onEmployeeAssignedIdChanged = e => setEmployeeAssignedId(e.target.value);
 
-        const canSave = [ issueDesc, empCreatedId, employeeAssignedId].every(Boolean) && !isLoading;
+        const canSave = [ issueDesc, empCreatedUsername, employeeAssignedId].every(Boolean) && !isLoading;
 
         // Save RepairOrder
         const onSaveRepairOrderClicked = async () => {
             if (canSave) {
-            await addNewRepairOrder({ customer: customer.id, employeeCreated: empCreatedId, employeeAssigned: employeeAssignedId, deviceType: repairRequest.deviceType, serialNo: repairRequest.serialNo, brand: repairRequest.brand, issueDesc })
+            await addNewRepairOrder({ customer: customer.id, employeeCreated: empCreatedUsername, employeeAssigned: employeeAssignedId, deviceType: repairRequest.deviceType, serialNo: repairRequest.serialNo, brand: repairRequest.brand, issueDesc })
             }
         }
 

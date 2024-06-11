@@ -25,7 +25,7 @@ export const employeesApiSlice = apiSlice.injectEndpoints({
                 })
                 return employeesAdapter.setAll(initialState, loadedEmployees);
             },
-            providesTags: (result, error, erg) => {
+            providesTags: (result, error, arg) => {
                 if (result?.ids) {
                     return [
                         { type: 'Employee', id: 'LIST'},

@@ -93,7 +93,7 @@ const NewInvoiceForm = ({ repairOrder }) => {
   //Save Invoice
   const onSaveInvoiceClicked = async () => {
     if (canSave) {
-      await addNewInvoice({ repairOrderId: repairOrder.id, customer: repairOrder.customer, employee: repairOrder.employeeAssigned, deviceType: repairOrder.deviceType, totalAmount: totalAmount })
+      await addNewInvoice({ repairOrderId: repairOrder.id, customer: repairOrder.customer, employee: repairOrder.employeeAssigned, deviceType: repairOrder.deviceType, serialNo: repairOrder.serialNo,  totalAmount: totalAmount })
     }  
   }
 

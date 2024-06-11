@@ -72,7 +72,7 @@ function App() {
           <Route path='support' element={<Support />} />
           <Route path='login' element={<Login />} />
           <Route path='signup' element={<NewCustomerSignup />} />
-          <Route path='signupemp' element={<NewEmployeeSignup />} />
+          <Route path='register' element={<NewEmployeeSignup />} />
           <Route path='terms&conditions' element={<TermsAndConds />} />
     </>
   )

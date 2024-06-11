@@ -96,7 +96,7 @@ const CustAnalysisContainer = () => {
                         {tableContent}
                     </tbody>
                 </table>
-            : <p>Empty Employees Analysis</p>
+            : <p>Empty Customers Analysis</p>
         )
 
     return content;

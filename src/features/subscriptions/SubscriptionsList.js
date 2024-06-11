@@ -101,7 +101,7 @@ const SubscriptionsList = () => {
 
   return (
     <>
-      <DashTableContent title="Contacts List" subTitle={`List of all new contacts (${count}) `} content={content} />
+      <DashTableContent title="Subscriptions List" subTitle={`List of all new contacts (${count}) `} content={content} />
       <Notify />
     </>
   )
