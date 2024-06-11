@@ -3,7 +3,7 @@ import { setCredentials } from '../../features/auth/authSlice';
 
 //fetch Base Query 
 const baseQuery =  fetchBaseQuery({ 
-    baseUrl: 'http://localhost:3500',
+    baseUrl: 'https://kgtechrepairs-api-v2.onrender.com',
     credentials: 'include',
     prepareHeaders: (hearders, { getState }) => {
         const token = getState().auth.token
