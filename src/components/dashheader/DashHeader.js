@@ -7,7 +7,7 @@ import { useSendLogoutMutation } from '../../features/auth/authApiSlice';
 import PulseLoader from "react-spinners/PulseLoader";
 import DashMenu from '../dashMenu/DashMenu';
 import DashUserStatus from '../dashUserStatus/DashUserStatus';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 import useAuth from '../../hooks/useAuth';
 import './DashHeader.css';
 
