@@ -23,7 +23,7 @@ const Employee = ({ employeeId }) => {
         <td className='table__cell capitalize cell__hover lg__device--cell '>{employee.user}</td>
         <td className='table__cell capitalize cell__hover sm__device--cell'>{employee.user.length < 11 ? employee.user : (`${employee.user.substring(0, 10)}...`)}</td>
         <td className='table__cell capitalize cell__hover lg__device--cell'>{employee.fullname}</td>
-        <td className='table__cell capitalize cell__hover sm__device--cell'>{employee.fullname.length < 15 ? employee.fullname : (`${employee.fullname.substring(0, 14)}...`)}</td>
+        <td className='table__cell capitalize cell__hover sm__device--cell'>{employee.fullname.length < 15 ? employee.fullname : (`${employee.fullname.substring(0, 5)}...`)}</td>
         <td className='table__cell cell__hover lg__device--cell'>{employee.phoneNo}</td>
         <td className='table__cell cell__hover sm__device--cell'>{employee.phoneNo.length < 13 ? employee.phoneNo : (`${employee.phoneNo.substring(0, 12)}...`)}</td>
         <td className='table__cell cell__hover lg__device--cell'>{employee.email}</td>
