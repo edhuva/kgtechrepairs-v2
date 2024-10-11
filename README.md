@@ -1,7 +1,18 @@
 ### KGTech Repair Version 2 (FullStack Application)
-KGTech repair app version 2 - is an application which provides business management repair orders system for KGTech company with an addition of more features than version 1. 
+KGTech repair app version 2 - is a web application which provides business management repair orders system for KGTech company, mainly improving kgtech repair version 1, adding more functionality and features.
 
-### features include: 
+### The project currently hosted on Render
+Link: https://kgtechrepairs-v2.onrender.com/
+
+### APP INFO
+
+### Target audience
+customers, general employees, managers and admins
+
+### Author:
+Edwin Matema
+
+### Features
 1. login functionality
 2. registration functionality
 3. repair orders management
@@ -87,3 +98,24 @@ KGTech repair app version 2 - is an application which provides business manageme
 44. [x] Provide About Us, Contact Us pages
 45. [x] Provide Terms & Conditions, Privacy Policy pages
 46. [x] Provide Social Media (facebook, twitter X, instagram, linkedin) platforms Links
+
+### KGTech Repair Version 2: Home Page
+![kgtech-v2](https://github.com/user-attachments/assets/ac4b436e-bbe4-4043-a1ee-4f3cd386344d)
+
+### KGTech Repair Version 2: Dash Board
+![kgtech-v2-3](https://github.com/user-attachments/assets/a9648ed2-3685-4ce0-a3a5-b52374f7ff33)
+
+### KGTech Repair Version 2: User Account Profile
+![kgtech-v2-4](https://github.com/user-attachments/assets/ebf79028-adcd-43f5-a839-7c65a82daa94)
+
+### KGTech Repair Version 2: Repair Orders List
+![kgtech-v2-6](https://github.com/user-attachments/assets/0796f4c0-9769-430f-851c-fff52b85f963)
+
+### KGTech Repair Version 2: Invoices List
+![kgtech-v2-5](https://github.com/user-attachments/assets/0fe24313-edce-43dd-9ed9-d91e136e0950)
+
+### KGTech Repair Version 2: Customers Analysis
+![kgtech-v2-7](https://github.com/user-attachments/assets/366b61de-0052-417c-9bff-f968cbd7f384)
+
+### KGTech Repair Version 2: Employees Analysis
+![kgtech-v2-8](https://github.com/user-attachments/assets/16bd995d-7d84-4d9e-aaeb-44891332fc1d)
