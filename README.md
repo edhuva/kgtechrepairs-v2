@@ -3,6 +3,7 @@ KGTech repair app version 2 - is a web application which provides business manag
 
 ### The project currently hosted on Render
 Link: https://kgtechrepairs-v2.onrender.com/
+#### This is hosted on Render free-tier and may take a few seconds to spin up!
 
 ## APP INFO
 
