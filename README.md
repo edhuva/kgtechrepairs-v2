@@ -1,10 +1,10 @@
-### KGTech Repair Version 2 (FullStack Application)
+# KGTech Repair Version 2 (FullStack Application)
 KGTech repair app version 2 - is a web application which provides business management repair orders system for KGTech company, mainly improving kgtech repair version 1, adding more functionality and features.
 
 ### The project currently hosted on Render
 Link: https://kgtechrepairs-v2.onrender.com/
 
-### APP INFO
+## APP INFO
 
 ### Target audience
 customers, general employees, managers and admins
