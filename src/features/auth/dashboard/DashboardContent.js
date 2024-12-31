@@ -3,6 +3,7 @@ import DashboardCard from './DashboardCard';
 import useAuth from '../../../hooks/useAuth';
 import './Dashboard.css';
 
+
 // DashboardContent
 const DashboardContent = ({ employees, customers, repairOrders, repairRequests, invoices }) => {
 

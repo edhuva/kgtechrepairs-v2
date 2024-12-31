@@ -53,7 +53,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     overflow: hidden;
-    animation: typing 5s infinite;
 }
 
 /* typing effect */
@@ -117,7 +116,14 @@
     }
 } 
 
-/* middle device eg, tabblets/bigger phones*/
+/* middle mobile phones/devices*/
+@media screen and (min-width: 500px) {
+    .wellcome h2 {
+        animation: typing 5s infinite;
+    }
+}
+
+/* larger device eg, tabblets/bigger phones*/
 @media screen and (min-width: 1240px) {
 
     .home__header {
